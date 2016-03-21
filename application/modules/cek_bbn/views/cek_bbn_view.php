@@ -23,7 +23,13 @@
 </div>
 
 <hr />
+<!-- Data -->
 
+
+
+
+
+				
 
 
 <?php $this->load->view($this->controller."_view_js"); ?>

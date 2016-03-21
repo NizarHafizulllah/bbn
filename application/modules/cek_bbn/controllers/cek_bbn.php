@@ -18,6 +18,8 @@ class cek_bbn extends master_controller  {
 		$this->set_content($content);
 		$this->render();
 	}
+	
+
 
 var $user;
 var $salt;
@@ -52,6 +54,7 @@ var $pass;
 			//show_array($ret_service);
 			echo $ret_service;
 	}
+	
 
 }
 ?>
