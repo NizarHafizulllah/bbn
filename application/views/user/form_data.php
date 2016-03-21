@@ -27,7 +27,8 @@
 						<!-- Jenis Perubahan Dropdown -->
 					<div class="form-group">
                     <select class="form-control select2" style="width: 100%;">
-                      <option selected="selected">Ubah Data Umum</option>
+						<option selected="selected">==Pilih Satu==</option>
+                      <option>Ubah Data Umum</option>
                       <option>Balik Nama Pemilik</option>
                     </select>
                   </div>
