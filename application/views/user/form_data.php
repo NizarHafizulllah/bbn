@@ -26,10 +26,10 @@
 					<div class="panel-body">
 						<!-- Jenis Perubahan Dropdown -->
 					<div class="form-group">
-                    <select class="form-control select2" style="width: 100%;">
-						<option selected="selected">==Pilih Satu==</option>
-                      <option>Ubah Data Umum</option>
-                      <option>Balik Nama Pemilik</option>
+                    <select class="form-control select2" style="width: 100%;" id="jenis_perubahan">
+						<option selected="selected" value="0">==Pilih Satu==</option>
+                      <option value="1">Ubah Data Umum</option>
+                      <option value="2">Balik Nama Pemilik</option>
                     </select>
                   </div>
 					</div>
@@ -37,16 +37,17 @@
             <form id="form_data" class="form-horizontal" method="post" action="#" role="form">
 				
 		<!-- Data Pemilik -->
+
 				
 		<div class="panel panel-primary">
 			<div class="panel-heading">
 			<strong><h3 class="panel-title">Data Umum</h3></strong>
 		</div>
-		<div class="panel-body">
+		<div class="panel-body" id="data_umum">
 		<div class="form-group">
 			<label class="col-sm-3 control-label">Tanggal BBN2</label>
 			<div class="col-sm-9">
-				<input type="text" name="tgl_bbn2" class="form-control input-style" placeholder="Tanggal BBN2">
+				<input type="text" name="tgl_bbn2" class="form-control input-style" id="tgl_bbn2" placeholder="Tanggal BBN2">
 			</div>
 		</div>
 		<div class="form-group">
@@ -90,7 +91,7 @@
 		<div class="panel-heading">
 			<strong><h3 class="panel-title">Pemilik</h3></strong>
 		</div>
-		<div class="panel-body">
+		<div class="panel-body" id="pemilik">
 			<div class="form-group">
 				<label class="col-sm-3 control-label">No. Identitas</label>
 				<div class="col-sm-9">
@@ -135,15 +136,31 @@
 			</div>
 		</div>
 	</div>
-				
-	<div class="form-group">
-		<div class="col-sm-offset-3 col-sm-9">
-			<button style="border-radius: 0;" type="submit" class="btn btn-lg btn-primary">Submit</button>
-			<button style="border-radius: 0;" id="reset" type="reset" class="btn btn-lg btn-danger">Cancel</button>
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<strong><h3 class="panel-title">Yang Lain</h3></strong>
+		</div>
+		<div class="panel-body">
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Dasar</label>
+				<div class="col-sm-9">
+					<input type="text" name="dasar" class="form-control input-style" placeholder="Dasar" readonly>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Pemohon</label>
+				<div class="col-sm-9">
+					<input type="text" name="pemohon" class="form-control input-style" placeholder="Pemohon">
+				</div>
+			</div>
+			<div class="form-group pull-center">
+				<div class="col-sm-offset-3 col-sm-9">
+					<button style="border-radius: 0;" type="submit" class="btn btn-lg btn-primary">Simpan</button>
+					<button style="border-radius: 0;" id="reset" type="reset" class="btn btn-lg btn-danger">Cancel</button>
+				</div>
+			</div>
 		</div>
 	</div>
-	
-
 </form>				
             </div><!-- /.box-body -->
             <div class="box-footer">

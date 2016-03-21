@@ -7,25 +7,23 @@ class user extends CI_Controller {
 		parent::__construct();
 	}
 	
-	public function index(){
+	public function Tema($page){
 		$this->load->view('user/header');
-		$this->load->view('user/dashboard');
+		$this->load->view('user/'.$page);
 		$this->load->view('user/side_bar');
 		$this->load->view('user/footer');
+	}
+	
+	public function index(){
+		$this->tema('dashboard');
 	}
 	
 	public function cari_data(){
-		$this->load->view('user/header');
-		$this->load->view('user/cari_data');
-		$this->load->view('user/side_bar');
-		$this->load->view('user/footer');
+		$this->tema('cari_data');
 	}
 	
 	public function form_data(){
-		$this->load->view('user/header');
-		$this->load->view('user/form_data');
-		$this->load->view('user/side_bar');
-		$this->load->view('user/footer');
+		$this->tema('form_data');
 	}
 }
 ?>
