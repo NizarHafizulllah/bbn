@@ -64,13 +64,13 @@ jQuery(document).ready(function() {
                                                 message: hasil.message,
 
                                                 callback: function(result) {
-                                                        location.href='<?php echo site_url("user"); ?>';
+                                                        location.href='<?php echo site_url("home"); ?>';
                                                 }
                                                  
                                                  
                                                 } 
                                             ); 
-                                        //location.href('<?php echo site_url("user"); ?>')        
+                                        //location.href('<?php echo site_url("home"); ?>')        
                   
                                     }
                                     else {
