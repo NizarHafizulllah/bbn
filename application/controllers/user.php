@@ -4,14 +4,14 @@
 class user extends coba_controller {
 	
 	var $controller;
-	public function __contruct(){
+	public function user(){
 		parent::__construct();
 		$this->controller = get_class($this);
 	}
 	
 		function index(){
 		$data_array=array();
-		$content = $this->load->view("index_view",$data_array,true);
+		$content = $this->load->view("user/index_view",$data_array,true);
 			
 		$this->set_subtitle("DASHBOARD");
 		$this->set_title("DASHBOARD");
