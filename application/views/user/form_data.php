@@ -144,7 +144,7 @@
 			<div class="form-group">
 				<label class="col-sm-3 control-label">Dasar</label>
 				<div class="col-sm-9">
-					<input type="text" name="dasar" class="form-control input-style" placeholder="Dasar" readonly>
+					<input type="text" name="dasar" class="form-control input-style" placeholder="Dasar">
 				</div>
 			</div>
 			<div class="form-group">
