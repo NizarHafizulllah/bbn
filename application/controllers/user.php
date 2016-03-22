@@ -7,7 +7,7 @@ class user extends CI_Controller {
 		parent::__construct();
 	}
 	
-	public function Tema($page){
+	public function tema($page){
 		$this->load->view('user/header');
 		$this->load->view('user/'.$page);
 		$this->load->view('user/side_bar');
@@ -15,15 +15,11 @@ class user extends CI_Controller {
 	}
 	
 	public function index(){
-		$this->tema('dashboard');
+		$this->tema('index');
 	}
-	
 	public function cari_data(){
 		$this->tema('cari_data');
 	}
-	
-	public function form_data(){
-		$this->tema('form_data');
-	}
+
 }
 ?>

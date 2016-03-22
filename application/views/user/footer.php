@@ -103,6 +103,10 @@
 	
 	<script>
 	$(document).ready(function(){
+		
+		
+		
+		
 		function disabled(){
 		var jenis_perubahan = $('#jenis_perubahan').val();
 		if (jenis_perubahan == '0'){
@@ -116,10 +120,11 @@
 			$('#data_umum').slideUp(1000);
 		}
 	}
-	
+		
 	$('#jenis_perubahan').change(disabled);
 	disabled();
 	});
+		
 	
 	</script>
   </body>

@@ -29,3 +29,5 @@
         </section>
         <!-- /.sidebar -->
       </aside>
+
+ <?php echo $content; ?>

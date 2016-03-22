@@ -12,4 +12,4 @@ class home extends master_controller  {
 		$this->render();
 	}
 }
-?>
+?> 
