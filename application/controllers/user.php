@@ -1,24 +1,22 @@
 <?php 
 
 
-class user extends CI_Controller {
-
+class user extends coba_controller {
+	
+	var $controller;
 	public function __contruct(){
 		parent::__construct();
+		$this->controller = get_class($this);
 	}
 	
-	public function tema($page){
-		$this->load->view('user/header');
-		$this->load->view('user/'.$page);
-		$this->load->view('user/side_bar');
-		$this->load->view('user/footer');
-	}
-	
-	public function index(){
-		$this->tema('index');
-	}
-	public function cari_data(){
-		$this->tema('cari_data');
+		function index(){
+		$data_array=array();
+		$content = $this->load->view("index_view",$data_array,true);
+			
+		$this->set_subtitle("DASHBOARD");
+		$this->set_title("DASHBOARD");
+		$this->set_content($content);
+		$this->cetak();
 	}
 
 }
