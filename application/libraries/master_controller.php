@@ -11,6 +11,11 @@ var $pilihan;
 		
 	 
 		// sleep(1);
+
+		// $userlogin = $this->session->userdata("userlogin");
+		// if($userlogin==false) {
+		// 	redirect("login");
+		// }
 		
 	}
 

@@ -1,4 +1,5 @@
 <?php 
+session_start();
 class Login extends CI_Controller {
 	function __construct(){
 		parent::__construct();
@@ -109,6 +110,11 @@ function cek_password($password) {
 		if($this->form_validation->run() == TRUE ) { 
 			unset($data['password2']);
 			$res = $this->db->insert("members",$data);
+
+
+			//$this->session->set_userdata("userlogin","oke");
+			$_SESSION['login'] = true;
+
 
 			// echo $this->db->last_query();
 			$data['registered_date'] = date("Y-m-d h:i:s");
