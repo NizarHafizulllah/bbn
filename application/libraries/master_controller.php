@@ -11,11 +11,16 @@ var $pilihan;
 		
 	 
 		// sleep(1);
+
+		// $userlogin = $this->session->userdata("userlogin");
+		// if($userlogin==false) {
+		// 	redirect("login");
+		// }
 		
 	}
 
 	function set_content($str) {
-		$this->content['content'] = $str;
+		$this->content['content'] = $str; 
 	}
 	
 	function set_title($str) {

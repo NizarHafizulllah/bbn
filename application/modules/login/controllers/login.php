@@ -1,4 +1,5 @@
 <?php 
+session_start();
 class Login extends CI_Controller {
 	function __construct(){
 		parent::__construct();
@@ -45,6 +46,54 @@ function cek_password($password) {
 
 
 }
+	function send_hash_password(){
+		$post = $this->input->post();
+		// $this->db->where['']
+		$email = $post['email'];
+//		$cek_data = $this->db->where('email',$post['email'])->num_rows();
+		$this->db->where("email",$post['email'])	;
+		$rs = $this->db->get("members"); 
+		if($rs->num_rows() == 1){
+			
+			$data_member = $rs->row();
+//			/$data['id'] = ' ';
+			$data['date'] = date('Y-m-d h:i:s');
+			$data['id_user'] = $data_member->id_use; //$this->db->query('select id from members where email = '.$email);
+			$data['hash'] = md5(date('Ymdhis').'r^7dfjdfdkf');
+			$user_id = $data['id_user'];
+			$hash = $data['hash'];
+			$date = $data['date'];
+			
+			$email_body = "<p>Kami Telah Menerima Permintaan <b>Recovery Password<b> anda <p>
+				        	<p>
+				        		silahkan klik link ". anchor("login/cek_hash?id_user=$user_id&hash=$hash")  ."
+				        	</p>";
+			
+			$res = $this->db->insert('lupa_password', $data);
+			
+			$ret = array("error"=>false, "message"=>"Permintaan Anda Telah Di Konfirmasi <br/> Silahkan Cek Email ".$email." Untuk Melanjutkan");
+			
+			$this->load->library('email');
+			
+		}
+		else{
+			$ret = array("error"=>true,"message"=>$email." tidak pernah terdaftar sebelumnya");
+		}
+		
+		echo json_encode($ret);
+	}
+	
+	function cek_hash(){
+		$get = $this->input->get();
+		$this->db->where("id_user",$get['id_user']);
+		$this->db->where("hash",$get['hash']);
+		
+		$rs = $this->db->get('lupa_password');
+		
+		if($rs->num_rows() == 1){
+			
+		}
+	}
 
 	function register(){
 		//sleep(1);
@@ -61,6 +110,11 @@ function cek_password($password) {
 		if($this->form_validation->run() == TRUE ) { 
 			unset($data['password2']);
 			$res = $this->db->insert("members",$data);
+
+
+			//$this->session->set_userdata("userlogin","oke");
+			$_SESSION['login'] = true;
+
 
 			// echo $this->db->last_query();
 			$data['registered_date'] = date("Y-m-d h:i:s");

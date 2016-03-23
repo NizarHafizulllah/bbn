@@ -62,15 +62,15 @@
 	                        			<h3>Lupa Password </h3>
 	                            		<p>Masukkan Email :</p>
 	                        		</div>
-	                        		<div class="form-top-right">
+	                        		<div class="form-top-right"> 
 	                        			<i class="fa fa-key"></i>
 	                        		</div>
 	                            </div>
 	                            <div class="form-bottom">
-				                    <form role="form" action="" method="post">
+				                    <form role="form" action="<?php echo site_url('login/send_hash_password'); ?>" method="post">
 				                    	<div class="form-group">
 				                    		<label class="sr-only" for="form-email">Username</label>
-				                        	<input type="text" name="form-email" placeholder="Email..." class="form-Email form-control" id="form-Email">
+				                        	<input type="text" name="email" placeholder="Email..." class="form-Email form-control" id="form-Email">
 				                        </div>
 				                        <button type="submit" class="btn">Kirim Password</button>
                                        <a href="<?php echo site_url('login'); ?>"><u>Mendaftar</u></a>

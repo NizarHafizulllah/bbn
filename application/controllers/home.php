@@ -1,6 +1,6 @@
 <?php
 class home extends master_controller  {
-	var $controller
+	var $controller;
 	function __consruct(){
 		parent::__construct();
 		$this->controller = get_class('$this');

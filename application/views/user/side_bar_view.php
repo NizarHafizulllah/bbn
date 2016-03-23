@@ -20,7 +20,7 @@
               </a>
             </li>
 		  <li class="treeview">
-              <a href="<?php echo site_url('user/cari_data'); ?>">
+              <a href="<?php echo site_url('cari_data'); ?>">
                 <i class="fa fa-search"></i> <span>Cek Data</span></i>
               </a>
             </li>

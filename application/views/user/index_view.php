@@ -2,7 +2,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Biaya Balik Nama
+            Dashboard
             <small>Welcome</small>
           </h1>
         </section>
