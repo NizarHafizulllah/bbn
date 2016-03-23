@@ -169,6 +169,9 @@ function verifikasi(){
 }
 
 
+    function Lupa_Password(){
+        $this->load->view("lupa_password");
+    }
 
 
 	function ceklogin(){

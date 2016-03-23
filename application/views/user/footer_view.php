@@ -2,7 +2,7 @@
         <div class="pull-right hidden-xs">
           <b>Version</b> 2.3.0
         </div>
-        <strong>Copyright &copy; 2014-2015 <a href="http://www.tigapilarmajumandiri.com">Tiga Pilar Maju Mandiri</a>.</strong> All rights reserved.
+        Dikelola Oleh <strong><a href="http://www.tigapilarmajumandiri.com">Tiga Pilar Maju Mandiri</a>.</strong> Hak Cipta Di Lindungi Undang-Undang
       </footer>
 
       <!-- Control Sidebar -->
@@ -103,6 +103,10 @@
 	
 	<script>
 	$(document).ready(function(){
+		
+		
+		
+		
 		function disabled(){
 		var jenis_perubahan = $('#jenis_perubahan').val();
 		if (jenis_perubahan == '0'){
@@ -116,10 +120,11 @@
 			$('#data_umum').slideUp(1000);
 		}
 	}
-	
+		
 	$('#jenis_perubahan').change(disabled);
 	disabled();
 	});
+		
 	
 	</script>
   </body>

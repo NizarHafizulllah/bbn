@@ -77,7 +77,7 @@
                         <div class="col-sm-8 col-sm-offset-2 text">
                             <h1><strong>SISFO BBN</strong> Login &amp; Pendaftaran </h1>
                             <div class="description">
-                            	<p>Sistem informasi Biaya Balik Nama Kendaraan</p>
+                            	<p>Sistem Informasi Biaya Balik Nama Kendaraan</p>
                             </div>
                         </div>
                     </div>
@@ -108,7 +108,9 @@
                                         <input type="hidden" id="mask" name="mask" />
                                         
                                         </div>
-				                        <button type="submit" class="btn">Sign in!</button>
+				                        <button type="submit" class="btn">Sign In!</button>
+                                       <a href="<?php echo site_url('login/lupa_password'); ?>"><u>Lupa Password</u></a>
+                                      
 				                    </form>
 			                    </div>
 		                    </div>
