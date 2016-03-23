@@ -52,6 +52,8 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
+// $this->load->library('email', $config);
+
 $autoload['libraries'] = array('session','database');
 
 

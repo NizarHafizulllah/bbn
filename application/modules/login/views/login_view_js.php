@@ -64,13 +64,13 @@ jQuery(document).ready(function() {
                                                 message: hasil.message,
 
                                                 callback: function(result) {
-                                                        location.href='<?php echo site_url("home"); ?>';
+                                                        location.href='<?php echo site_url("user"); ?>';
                                                 }
                                                  
                                                  
                                                 } 
                                             ); 
-                                        //location.href('<?php echo site_url("home"); ?>')        
+                                        //location.href('<?php echo site_url("user"); ?>')        
                   
                                     }
                                     else {
@@ -170,5 +170,112 @@ jQuery(document).ready(function() {
     
     
 });
+	
+	$(document).ready(function(){
+		$('#frm_registrasi').bootstrapValidator({
+				message: 'This value is not valid', 
+				feedbackIcons: { 
+					valid: 'glyphicon glyphicon-ok', 
+					invalid: 'glyphicon glyphicon-remove', 
+					validating: 'glyphicon glyphicon-refresh'
+				},
+				fields: {
+					nama: {
+						validators: {
+							notEmpty: {
+								message : 'Nama tidak boleh kosong'	
+							},
+							stringLength: {
+								min: 5, 
+								message: 'Panjang nama minimal 5 karakter'
+							},
+						}
+					},
+					alamat: {
+                		validators: {
+                    		notEmpty: {
+                        		message: 'Alamat tidak boleh kosong'
+                    		},
+                    		stringLength: {
+                        		min: 10,
+                        		message: 'panjang Alamat minimal 10 karakter'
+                    		}
+                		}
+            		},
+					nomor_hp: {
+                		validators: {
+                    		notEmpty: {
+                        		message: 'No Hp tidak boleh kosong'
+                    		},
+                    		stringLength: {
+                        		min: 11,
+                        		message: 'Panjang No. Hp minimal 11 karakter'
+                    		}
+                		}
+            		},
+					nomor_ktp: {
+                		validators: {
+                    		notEmpty: {
+                        		message: 'tidak boleh kosong'
+                    		},
+							regexp: {
+                        		regexp: /^[0-9_\.]+$/,
+                        		message: 'Hanya Angka'
+                    		},
+                    		stringLength: {
+                        		min: 16,
+                        		message: 'panjang minimal 16 karakter'
+                    		}
+							
+                		}
+            		},
+					email: {
+                		validators: {
+                    		notEmpty: {
+                        		message: 'Email tidak boleh kosong'
+                    		},
+							emailAddress: {
+                        		message: 'Penulisan email harus valid'
+                    		},
+                    		remote: {
+                        		type: 'POST',
+                        		url: "<?php echo site_url('login/cekEmail'); ?>",
+								message: 'Email ini sudah terdaftar',
+								delay: 2000
+                    		}
+							
+                		}
+            		},
+					password: {
+                		validators: {
+                    		notEmpty: {
+								message: 'password tidak boleh kosong'
+							},
+							stringLength: {
+								min: 6,
+								message: 'panjang tidak boleh kurang dari 6 karakter'
+							}
+						}
+					},
+					password2: {
+						validators: {
+							notEmpty: {
+								message: 'tidak boleh kosong'
+							},
+							identical: {
+								field: 'password',
+								message: 'passwod yang anda masukkan tidak sesuai'
+							}
+						}
+					}
+					
+				}
+				
+			});
+			
+		$('#reset').click(function() {
+        $('#frm_registrasi').data('bootstrapValidator').resetForm(true);
+    	});
+	});
 
 </script>

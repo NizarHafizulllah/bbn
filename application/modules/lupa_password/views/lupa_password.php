@@ -1,19 +1,15 @@
+
 <!DOCTYPE html>
 <html>
-
 <head>
-	<title>Ubah Password</title>
-	
-       
-
-        <!-- CSS -->
+	<title>Lupa Password</title>
+	<!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/font-awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/form-elements.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
-
-      
+		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrapValidator.min.css">
 </head>
 <body>
     <div class="modal fade bs-example-modal-sm" id="myPleaseWait" tabindex="-1"
@@ -51,7 +47,7 @@
                 	
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2 text">
-                            <h1><strong>SISFO BBN</strong> Ubah Password </h1>
+                            <h1><strong>SISFO BBN</strong> Lupa Password </h1>
                             <div class="description">
                             	<p>Sistem Informasi Biaya Balik Nama Kendaraan</p>
                             </div>
@@ -64,29 +60,24 @@
                         	<div class="form-box">
 	                        	<div class="form-top">
 	                        		<div class="form-top-left">
-	                        			<h3>Ubah Password </h3>
-	                            		<p>Masukkan Password Baru :</p>
+	                        			<h3>Lupa Password </h3>
+	                            		<p>Masukkan Email :</p>
 	                        		</div>
-	                        		<div class="form-top-right">
+	                        		<div class="form-top-right"> 
 	                        			<i class="fa fa-key"></i>
 	                        		</div>
 	                            </div>
-	                           <div class="form-bottom">
-				                    <form role="form" action="" method="post" class="login-form">
+	                            <div class="form-bottom">
+				                    <form role="form" action="<?php echo site_url('lupa_password/send_hash_password'); ?>" method="post" class="lupa-password-form" id="form_lupa_password">
 				                    	<div class="form-group">
-				                    		<label class="sr-only" for="form-password">Password</label>
-				                        	<input type="text" name="form-password" placeholder="Masukkan Password Baru..." class="form-password form-control" id="form-password">
+				                    		<label class="sr-only" for="form-email">Username</label>
+				                        	<input type="text" name="email" placeholder="Email..." class="form-control input-style" id="form-Email">
+											
+											<input type="hidden" id="mask" name="mask" />
 				                        </div>
-				                        <div class="form-group">
-				                        	<label class="sr-only" for="form-ulangi-password">Ulangi Password</label>
-				                        	<input type="password" name="form-ulangi-password" placeholder="Ulangi Password..." class="form-password form-control" id="form-ulangi-password">
-				                        
-                                        <input type="hidden" id="mask" name="mask" />
-                                        
-                                        </div>
-                                        
-				                        <button type="submit" class="btn">Ubah Password</button>
-                                        
+				                        <button type="submit" class="btn">Kirim Password</button>
+                                       <a href="<?php echo site_url('login'); ?>"><u>Mendaftar</u></a>
+                                      
 				                    </form>
 			                    </div>
 		                    </div>
@@ -134,10 +125,11 @@
         <script src="<?php echo base_url(); ?>assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/jquery.backstretch.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/jquery.md5.js"></script>
+		<script src="<?php echo base_url(); ?>assets/js/bootstrapValidator.min.js"></script>
         
  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/js/bootstrap-dialog.min.js"></script>
         <?php 
-        $this->load->view("login_view_js");
+        $this->load->view("lupa_password_js");
         ?>        
         <!--[if lt IE 10]>
             <script src="<?php echo base_url(); ?>assets/js/placeholder.js"></script>
