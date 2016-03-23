@@ -15,7 +15,7 @@ var $pilihan;
 	}
 
 	function set_content($str) {
-		$this->content['content'] = $str;
+		$this->content['content'] = $str; 
 	}
 	
 	function set_title($str) {

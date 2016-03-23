@@ -18,7 +18,7 @@ class cek_bbn extends master_controller  {
 		$this->set_content($content);
 		$this->render();
 	}
-	
+	 
 
 
 var $user;
