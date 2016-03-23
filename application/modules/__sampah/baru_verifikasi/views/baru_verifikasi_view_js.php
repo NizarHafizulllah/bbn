@@ -1,6 +1,7 @@
 <?php 
 $userdata = $this->session->userdata("userdata");
 ?>
+
 <script>
 var daft_id = false;
 

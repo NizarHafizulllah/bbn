@@ -4,6 +4,9 @@ class cek_bbn extends master_controller  {
 	function cek_bbn(){
 		$this->controller = get_class($this);
 		parent::__construct();
+
+
+		
 	}
 	
 	
