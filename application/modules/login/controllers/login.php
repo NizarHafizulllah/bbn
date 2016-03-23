@@ -159,12 +159,14 @@ function verifikasi(){
 		$this->load->view("register_confirm_fail");
 	}
 
-
 }
 
 
     function Lupa_Password(){
         $this->load->view("lupa_password");
+    }
+    function ubah_Password(){
+        $this->load->view("ubah_password");
     }
 
 
