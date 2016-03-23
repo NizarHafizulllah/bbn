@@ -58,7 +58,7 @@ function cek_password($password) {
 			$data_member = $rs->row();
 //			/$data['id'] = ' ';
 			$data['date'] = date('Y-m-d h:i:s');
-			$data['id_user'] = $data_member->id_use; //$this->db->query('select id from members where email = '.$email);
+			$data['id_user'] = $data_member->id_user; //$this->db->query('select id from members where email = '.$email);
 			$data['hash'] = md5(date('Ymdhis').'r^7dfjdfdkf');
 			$user_id = $data['id_user'];
 			$hash = $data['hash'];
@@ -74,6 +74,23 @@ function cek_password($password) {
 			$ret = array("error"=>false, "message"=>"Permintaan Anda Telah Di Konfirmasi <br/> Silahkan Cek Email ".$email." Untuk Melanjutkan");
 			
 			$this->load->library('email');
+			
+			// $this->email->initialize(array(
+			//   'mailpath' => "/usr/sbin/sendmail",
+			//   'protocol' => 'smtp',
+			//   'smtp_host' => 'localhost',			  
+			//   'smtp_port' => 25,
+			//   'mailtype'  => 'html', 
+			//   'crlf' => "\r\n",
+			//   'newline' => "\r\n"
+			// ));
+
+			// $this->email->from('no-reply@tigapilarmandiri.com', 'Firmansyah');
+			// $this->email->to($data['email']);
+		 
+			// $this->email->subject('Pemulihan Akun Sisfo BBN');
+			// $this->email->message($email_body);
+			// $this->email->send();
 			
 		}
 		else{
@@ -91,6 +108,7 @@ function cek_password($password) {
 		$rs = $this->db->get('lupa_password');
 		
 		if($rs->num_rows() == 1){
+			
 			
 		}
 	}
