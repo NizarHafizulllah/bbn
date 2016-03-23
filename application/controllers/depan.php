@@ -18,7 +18,7 @@ class Depan extends master_controller  {
 function test(){
 	$this->load->helper("kirimemail");
 
-	kirimemail("taujago@gmail.com",'Test kirim email ','<b>test kirim email</b>');
+	kirimemail("taujago@gmail.com",'Test kirim email helper  ','<b>test kirim email</b>');
 }
 
 
@@ -38,8 +38,15 @@ function test(){
 		$config['smtp_user'] = $username;
 		// SMTP Password like (abc***##)
 		$config['smtp_pass'] = $user_password;
+
+
+		$config['mailtype'] = 'html';
+		$config['crlf'] = "\r\n";
+		$config['newline'] = "\r\n";
+
+
 		// Load email library and passing configured values to email library
-		// $this->load->library('email', $config);
+		$this->load->library('email', $config);
 		// Sender email address
 		$this->email->from($sender_email, $username);
 		// Receiver email address.for single email

@@ -3,6 +3,11 @@
 
 
 function kirimemail($tujuan,$subjek,$pesan){
+
+
+		$CI->kirim =& get_instance();
+     	
+
 		$username = "taujago@gmail.com";
 		$sender_email = "taujago@zahiraccounting.com";
 		$user_password = "T0z4QX015EII5ARyOIDkyQ";
@@ -27,16 +32,18 @@ function kirimemail($tujuan,$subjek,$pesan){
 		// Load email library and passing configured values to email library
 		
 		// Sender email address
-		$this->email->from($sender_email, $username);
+		$CI->kirim->load->library('email'); // load library 
+		$CI->kirim->email->from($sender_email, $username);
 		// Receiver email address.for single email
-		//$this->email->to($receiver_email);
+		//$CI->kirim->email->to($receiver_email);
 		//send multiple email
-		$this->email->to($tujuan);
+		$CI->kirim->email->to($tujuan);
 		// Subject of email
-		$this->email->subject($subject);
+		$CI->kirim->email->subject($subject);
 		// Message in email
-		$this->email->message($message);
+		$CI->kirim->email->message($message);
 		// It returns boolean TRUE or FALSE based on success or failure
-		$send = $this->email->send(); 
+		$send = $CI->kirim->email->send(); 
+		echo  $CI->kirim->email->print_debugger();
 		return $send;
 }

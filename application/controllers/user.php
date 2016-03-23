@@ -19,5 +19,6 @@ class user extends coba_controller {
 		$this->cetak();
 	}
 
+
 }
 ?>
