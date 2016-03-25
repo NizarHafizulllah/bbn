@@ -19,6 +19,7 @@
 
 
 
+
 $("#form_data").submit(function(){
 
                 $.ajax({
@@ -76,6 +77,20 @@ $('#form_data').bootstrapValidator({
                             }
                         }
                     },
+                    nomor_rangka: {
+                        validators: {
+                            notEmpty: {
+                                message : 'Data tidak boleh kosong' 
+                            }
+                        }
+                    },
+                    tanggal: {
+                        validators: {
+                            notEmpty: {
+                                message : 'Data tidak boleh kosong' 
+                            }
+                        }
+                    },
                     jenis: {
                         validators: {
                             notEmpty: {
@@ -98,7 +113,7 @@ $('#form_data').bootstrapValidator({
                             }
                         }
                     },
-                    no_pol: {
+                    nomor_polisi: {
                         validators: {
                             notEmpty: {
                                 message : 'Data tidak boleh kosong'
@@ -112,14 +127,14 @@ $('#form_data').bootstrapValidator({
                             }
                         }
                     },
-                    no_mesin: {
+                    nomor_mesin: {
                         validators: {
                             notEmpty: {
                                 message : 'Data tidak boleh kosong'
                             }
                         }
                     },
-                    no_identitas: {
+                    nomor_identitas: {
                         validators: {
                             notEmpty: {
                                 message : 'Data tidak boleh kosong'
@@ -147,7 +162,7 @@ $('#form_data').bootstrapValidator({
                             }
                         }
                     },
-                    no_ponsel: {
+                    nomor_ponsel: {
                         validators: {
                             notEmpty: {
                                 message : 'Data tidak boleh kosong'
