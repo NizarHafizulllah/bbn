@@ -1,13 +1,15 @@
 <?php
 class coba_controller extends CI_Controller {
 
-var $pilihan; 
+ 
 	function coba_controller() {
 		parent::__construct();  
 
-		// if($this->session->userdata('login') == false ) {
-		// 	redirect('login/');
-		// } 
+		$datalogin = $this->session->userdata("login");
+
+		if( $datalogin['login'] == false ) {
+			redirect('login/');
+		} 
 		
 	 
 		// sleep(1);

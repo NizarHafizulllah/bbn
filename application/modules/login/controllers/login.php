@@ -1,6 +1,5 @@
 <?php 
-session_start();
-class Login extends coba_controller {
+class Login extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->helper("tanggal");
@@ -214,7 +213,12 @@ function verifikasi(){
 					'nama' => $member->nama
 					);
 
-		 		$this->session->userdata('login', true);
+		 		$this->session->set_userdata('login', $jj);
+
+		 		$datalogin = $this->session->userdata("login");
+
+		 		//show_array($datalogin); exit;
+
 		 		$ret = array("error"=>false,"message"=>"Login sukses.Klik Oke untuk melanjutkan");
 				
 
