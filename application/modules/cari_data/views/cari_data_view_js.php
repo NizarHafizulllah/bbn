@@ -11,29 +11,29 @@
 				success  : function(ret){
 					console.log(ret);
 				}
-			})
+			});
 			return false;
 
-		})
+		}); 
 
-	});
-    
-    $(document).ready(function(){
-       			$('#form_data').bootstrapValidator({
-				message: 'This value is not valid', 
-				feedbackIcons: { 
-					valid: 'glyphicon glyphicon-ok', 
-					invalid: 'glyphicon glyphicon-remove', 
-					validating: 'glyphicon glyphicon-refresh'
-				},
-				fields: {
-					warna: {
-						validators: {
-							notEmpty: {
-								message : 'Data tidak boleh kosong'	
+
+
+
+$('#form_data').bootstrapValidator({
+                message: 'This value is not valid', 
+                feedbackIcons: { 
+                    valid: 'glyphicon glyphicon-ok', 
+                    invalid: 'glyphicon glyphicon-remove', 
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields: {
+                    warna: {
+                        validators: {
+                            notEmpty: {
+                                message : 'Data tidak boleh kosong' 
                             }
-						}
-					},
+                        }
+                    },
                     jenis: {
                         validators: {
                             notEmpty: {
@@ -138,25 +138,24 @@
                     
 
 
-					
-				}
-				
-			});
-			
-		$('#reset').click(function() {
+                    
+                }
+                
+            });
+            
+        $('#reset').click(function() {
         $('#form_data').data('bootstrapValidator').resetForm(true);
-    	});
-     
-    });
+        });
+
+
+ $(.select2).select2();
+        $("#datemask").inputmask("dd/mm/yyyy", {"placeholde": "dd/mm/yyyy"}); 
+
+	});
+    
     
 
        
 
 </script>
-<script>
-    function(){
-        
-        $(.select2).select2();
-        $("#datemask").inputmask("dd/mm/yyyy", {"placeholde": "dd/mm/yyyy"}); 
-       }); 
-</script>   
+ 
