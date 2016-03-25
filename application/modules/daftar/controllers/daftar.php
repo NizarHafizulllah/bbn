@@ -101,6 +101,9 @@ function cek_jenis_perubahan($jenis_perubahan) {
 
 
 
+
+
+
     function simpan(){
         $post = $this->input->post();
 

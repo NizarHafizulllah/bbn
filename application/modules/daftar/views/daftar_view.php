@@ -59,11 +59,14 @@
                         
 						<!-- Jenis Perubahan Dropdown -->
 					<div class="form-group">
+					<div class="col-sm-12"> 
                     <select class="form-control select2" style="width: 100%;" id="jenis_perubahan" name="jenis_perubahan">
+
 						<option selected="selected" value="0">==Pilih Satu==</option>
                       <option value="1">Ubah Data Umum</option>
                       <option value="2">Balik Nama Pemilik</option>
                     </select>
+                    </div>
                   </div>
 					</div>
 				</div>
@@ -82,9 +85,15 @@
 		</div>
 		<div class="panel-body" id="data_umum">
 		<div class="form-group">
+			<label class="col-sm-3 control-label">No. Rangka</label>
+			<div class="col-sm-9">
+				<input type="text" name="nomor_rangka" id="nomor_rangka" class="form-control input-style" placeholder="Nomor Rangka">
+			</div>
+		</div>
+		<div class="form-group">
 			<label class="col-sm-3 control-label">Tanggal BBN2</label>
 			<div class="col-sm-9">
-				<input type="text" name="nomor_rangka" id="nomor_rangka">
+			
 				<input type="text" id="tanggal" name="tanggal" class="form-control input-style"   placeholder="Tanggal BBN2"  data-inputmask= "'alias' : 'dd/mm/yy'" data-mask>
 			</div>
 		</div>
