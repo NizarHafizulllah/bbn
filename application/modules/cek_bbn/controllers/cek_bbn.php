@@ -11,7 +11,7 @@ class cek_bbn extends master_controller  {
 	
 	
 	function index(){
-
+        
 
 		$data_array=array();
 		$content = $this->load->view($this->controller."_view",$data_array,true);
