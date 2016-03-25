@@ -1,10 +1,11 @@
 <?php 
-session_start();
-class lupa_password extends coba_controller {
+// session_start();
+class lupa_password extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->helper("tanggal");
 		$this->load->helper("url");
+		$this->load->helper("kirimemail");
 		//$this->load->helper("serviceurl");
 		
 	}
@@ -53,7 +54,9 @@ class lupa_password extends coba_controller {
 //			$ret = array("error"=>false, "message"=>"Permintaan Anda Telah Di Konfirmasi <br/> Silahkan Cek Email ".$email." Untuk Melanjutkan");
 //			
 			
-				$this->kirim($data_member->email,'Reset Pasword',$email_body,false);
+				// $this->load->library('kirimemail');
+			kirimemail($data_member->email,'Reset Pasword',$email_body,false);
+				//$this->kirim($data_member->email,'Reset Pasword',$email_body,false);
 			
 			$this->load->view('succes_send_hash');
 			

@@ -1,7 +1,7 @@
 <?php 
 
 
-class user extends coba_controller {
+class user extends user_controller {
 	
 	var $controller;
 	public function user(){
@@ -11,7 +11,7 @@ class user extends coba_controller {
 	
 		function index(){
 		
-				$data_array=array();
+		$data_array=array();
 		$content = $this->load->view("user/index_view",$data_array,true);
 			
 		$this->set_subtitle("DASHBOARD");

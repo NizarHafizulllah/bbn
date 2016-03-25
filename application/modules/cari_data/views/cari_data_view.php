@@ -21,7 +21,7 @@
               	<form id="cekbbn" action="#" method="post">
   					<div class="col-lg-12">
 						<div class="input-group">
-      						<input type="text" name="no_bpkb" id="no_bpkb" class="form-control" placeholder="Masukkan Nomor BPKB">
+      						<input type="text" name="no_rangka" id="no_rangka" class="form-control" placeholder="Masukkan Nomor Rangka">
       						<span class="input-group-btn">
         						<input type="submit" class="btn btn-primary"  value="Periksa" id="show_form"/> 
 							</span>
@@ -195,4 +195,9 @@
 			
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
+
+
+<?php 
+$this->load->view($this->controller."_view_js");
+?>
 	

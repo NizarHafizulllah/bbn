@@ -4,6 +4,7 @@ class Login extends CI_Controller {
 		parent::__construct();
 		$this->load->helper("tanggal");
 		$this->load->helper("url");
+		$this->load->helper("kirimemail");
 		//$this->load->helper("serviceurl");
 		
 	}
@@ -59,6 +60,7 @@ function cek_password($password) {
 		$this->load->library('form_validation');
   		$this->form_validation->set_rules('email','Email','callback_cek_email');
   		$this->form_validation->set_rules('password','Password','callback_cek_password');
+
 		
 		 
 		$this->form_validation->set_message('required', ' %s Harus diisi ');
@@ -93,8 +95,11 @@ function cek_password($password) {
 				
 
 				$res = $this->db->insert("aktivasi",$data_validasi);
+
+
+				// $this->load->library('kirimemail');
 				
-				$this->kirim($post['email'],'Reset Pasword',$email_body,false);
+				kirimemail($data['email'],'Konfirmasi Pendaftaran BBN',$email_body,false);
 
 				// $this->load->library('email');
 

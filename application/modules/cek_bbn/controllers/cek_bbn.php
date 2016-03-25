@@ -51,7 +51,7 @@ var $pass;
 
 			$json_data = json_encode($data_service);	
 
-			echo $json_data; 
+			//echo $json_data; 
 
 			$ret_service = $this->execute_service2($url,"ComplGetBerkasCheckPoint",$json_data);
 			//show_array($ret_service);

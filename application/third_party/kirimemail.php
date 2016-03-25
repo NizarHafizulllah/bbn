@@ -1,9 +1,15 @@
 <?php 
+class kirimemail extends CI_Controller {
+
+	function kirimemail(){
+
+		parent::__construct();
+	}
 
 
-function kirimemail($tujuan,$subjek,$pesan,$debug=false){
-		$CI =& get_instance();
 
+
+function send($tujuan,$subjek,$pesan,$debug=false){
 		$username = "taujago@gmail.com";
 		$sender_email = "taujago@zahiraccounting.com";
 		$user_password = "T0z4QX015EII5ARyOIDkyQ";
@@ -26,19 +32,28 @@ function kirimemail($tujuan,$subjek,$pesan,$debug=false){
 
 
 		// Load email library and passing configured values to email library
-		$CI->load->library('email', $config);
+		$this->load->library('email', $config);
 		// Sender email address
-		$CI->email->from($sender_email, $username);
+		$this->email->from($sender_email, $username);
 		// Receiver email address.for single email
-		//$CI->email->to($receiver_email);
+		//$this->email->to($receiver_email);
 		//send multiple email
-		$CI->email->to($tujuan);
+		$this->email->to($tujuan);
 		// Subject of email
-		$CI->email->subject($subject);
+		$this->email->subject($subject);
 		// Message in email
-		$CI->email->message($message);
+		$this->email->message($message);
 		// It returns boolean TRUE or FALSE based on success or failure
-		$send = $CI->email->send(); 
-		echo  ($debug==true)?$CI->email->print_debugger():"";
+		$send = $this->email->send(); 
+		echo  ($debug==true)?$this->email->print_debugger():"";
 	}
 
+
+
+}
+
+
+
+
+
+?>
