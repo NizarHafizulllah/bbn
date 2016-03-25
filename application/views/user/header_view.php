@@ -1,3 +1,7 @@
+<?php 
+$userdata = $this->session->userdata('login');
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -16,8 +20,11 @@
 	  <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/AdminLTE.min.css'); ?>">
 	  
 	  <link rel="stylesheet" href="<?php echo base_url('assets/plugins/select2/select2.min.css'); ?>">
+        
+       <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrapValidator.min.css">
+
     <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
+folder instead of downloading all of them to reduce the load. -->
 	  <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/skins/_all-skins.min.css'); ?>">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -26,6 +33,32 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+
+
+
+
+
+    
+    <!-- jQuery 2.1.4 -->
+    <script src="<?php echo base_url('assets/plugins/jQuery/jQuery-2.1.4.min.js'); ?>"></script>
+    <!-- Bootstrap 3.3.5 -->
+    <script src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js'); ?>"></script>
+        <!-- mask -->
+    <script src="<?php echo base_url(); ?>assets/plugins/input-mask/jquery.inputmask.js"></script>
+    <script src="<?php echo base_url(); ?>assets/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+    <script src="<?php echo base_url(); ?>assets/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+    <!-- SlimScroll -->
+    <script src="<?php echo base_url('assets/plugins/slimScroll/jquery.slimscroll.min.js'); ?>"></script>
+    <!-- FastClick -->
+    <script src="<?php echo base_url('assets/plugins/fastclick/fastclick.min.js'); ?>"></script>
+    <!-- AdminLTE App -->
+    <script src="<?php echo base_url('assets/dist/js/app.min.js'); ?>"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="<?php echo base_url('assets/dist/js/demo.js'); ?>"></script>
+    <script src="<?php echo base_url(); ?>assets/js/bootstrapValidator.min.js"></script>
+
+
 	</head>
 	<body class="hold-transition skin-blue sidebar-mini">
 	  <!-- Site wrapper -->
@@ -52,11 +85,11 @@
 			  <ul class="nav navbar-nav">
 				  <!-- User Acount -->
 				  <li class="dropdown user user-menu">
-				  	<a href="#" class="dropdown-toggle" data-toggle = "dropdown"><i class="glyphicon glyphicon-user"></i><span class="hidden-xs">Nizar Hafizullah</span></a>
+				  	<a href="#" class="dropdown-toggle" data-toggle = "dropdown"><i class="glyphicon glyphicon-user"></i><span class="hidden-xs"><?php echo $userdata['nama'] ?></span></a>
 				  	<ul class="dropdown-menu">
 					  <li class="user-header">
-							<p>Nizar Hafizullah
-						  	<small>Nizarhafizullah66@gmail.com</small>
+							<p><?php echo $userdata['nama'] ?>
+						  	<small><?php echo $userdata['email'] ?></small>
 								</p>
 						</li>	
                   <!-- Menu Footer-->
