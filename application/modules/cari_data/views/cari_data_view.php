@@ -35,6 +35,8 @@
           </div><!-- /.box -->
 		
 			<!--form-->
+
+			           <form id="form_data" class="form-horizontal" method="post" action="<?php echo site_url('cari_data/simpan'); ?>" role="form">     
 			<div class="box box-primary" id="bagian_form">
             <div class="box-header with-border">
               <h3 class="box-title">Data</h3>
@@ -43,7 +45,12 @@
                 <button class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
               </div>
             </div>
+
+
+             
             <div class="box-body">
+
+
 				<div class="panel panel-primary">
 					<div class="panel-heading">
 						<div class="panel-title">Jenis Perubahan</div>
@@ -52,7 +59,7 @@
                         
 						<!-- Jenis Perubahan Dropdown -->
 					<div class="form-group">
-                    <select class="form-control select2" style="width: 100%;" id="jenis_ubah">
+                    <select class="form-control select2" style="width: 100%;" id="jenis_perubahan" name="jenis_perubahan">
 						<option selected="selected" value="0">==Pilih Satu==</option>
                       <option value="1">Ubah Data Umum</option>
                       <option value="2">Balik Nama Pemilik</option>
@@ -64,10 +71,10 @@
             
 				
 		<!-- Data Pemilik -->
-                <form id="form_data" class="form-horizontal" method="post" action="<?php echo site_url('cari_data/simpan'); ?>" role="form">
+
                     
-                    <input type="hidden" name="jenis_perubahan" id="jenis_perubahan">
-                    <input type="hidden" name="no_rangka" id="no_rangka">
+<!--                     <input type="hidden" name="jenis_perubahan" id="jenis_perubahan">
+ -->                    
 				
 		<div class="panel panel-primary">
 			<div class="panel-heading">
@@ -77,40 +84,41 @@
 		<div class="form-group">
 			<label class="col-sm-3 control-label">Tanggal BBN2</label>
 			<div class="col-sm-9">
-				<input type="text" name="tgl_bbn2" class="form-control input-style" id="date-mask" placeholder="Tanggal BBN2"  data-inputmask= "'alias' : 'dd/mm/yy'" data-mask>
+				<input type="text" name="nomor_rangka" id="nomor_rangka">
+				<input type="text" id="tanggal" name="tanggal" class="form-control input-style"   placeholder="Tanggal BBN2"  data-inputmask= "'alias' : 'dd/mm/yy'" data-mask>
 			</div>
 		</div>
 		<div class="form-group">
 			<label class="col-sm-3 control-label">Warna</label>
 			<div class="col-sm-9">
-				<input type="text" name="warna" class="form-control input-style" placeholder="Warna">
+				<input type="text" id="warna" name="warna" class="form-control input-style" placeholder="Warna">
 			</div>
 		</div>
 		<div class="form-group">
 			<label class="col-sm-3 control-label">Jenis</label>
 			<div class="col-sm-9">
-				<input type="text" name="jenis" class="form-control input-style" placeholder="Jenis">
+				<input type="text" id="jenis" name="jenis" class="form-control input-style" placeholder="Jenis">
 			</div>
 		</div>
 		<div class="form-group">
 			<label class="col-sm-3 control-label">Bentuk</label>
 			<div class="col-sm-9">
-				<input type="text" name="bentuk" class="form-control input-style" placeholder="Bentuk">
+				<input type="text" id="bentuk" name="bentuk" class="form-control input-style" placeholder="Bentuk">
 			</div>
 		</div>
 		<div class="form-group">
 			<label class="col-sm-3 control-label">No. Polisi / Warna TNKB</label>
 			<div class="col-sm-4">
-				<input type="text" name="no_pol" class="form-control input-style" placeholder="No. Polisi. . .">
+				<input type="text" id="nomor_polisi" name="nomor_polisi" class="form-control input-style" placeholder="No. Polisi. . .">
 			</div>
 			<div class="col-sm-5">
-				<input type="text" name="warna_tnkb" class="form-control input-style" placeholder="Warna TNKB. . .">
+				<input type="text" id="warna_tnkb" name="warna_tnkb" class="form-control input-style" placeholder="Warna TNKB. . .">
 			</div>
 		</div>
 		<div class="form-group">
 			<label class="col-sm-3 control-label">No. Mesin</label>
 			<div class="col-sm-9">
-				<input type="text" name="no_mesin" class="form-control input-style" placeholder="No. Mesin. . . ">
+				<input type="text" id="nomor_mesin" name="nomor_mesin" class="form-control input-style" placeholder="No. Mesin. . . ">
 			</div>
 		</div>
 	</div>
@@ -125,43 +133,43 @@
 			<div class="form-group">
 				<label class="col-sm-3 control-label">No. Identitas</label>
 				<div class="col-sm-9">
-					<input type="text" name="no_identitas" class="form-control input-style" placeholder="No. Identitas. . . ">
+					<input type="text" id="nomor_identitas" name="nomor_identitas" class="form-control input-style" placeholder="No. Identitas. . . ">
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="col-sm-3 control-label">Nama</label>
 				<div class="col-sm-9">
-					<input type="text" name="nama" class="form-control input-style" placeholder="Nama ">
+					<input type="text" id="nama" name="nama" class="form-control input-style" placeholder="Nama ">
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="col-sm-3 control-label">Pekerjaan</label>
 				<div class="col-sm-9">
-					<input type="text" name="pekerjaan" class="form-control input-style" placeholder="Pekerjaan">
+					<input type="text" id="pekerjaan" name="pekerjaan" class="form-control input-style" placeholder="Pekerjaan">
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="col-sm-3 control-label">Alamat</label>
 				<div class="col-sm-9">
-					<textarea type="text" name="alamat" class="form-control input-style" placeholder="Alamat"></textarea>
+					<textarea type="text" id="alamat" name="alamat" class="form-control input-style" placeholder="Alamat"></textarea>
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="col-sm-3 control-label">Kode Pos</label>
 				<div class="col-sm-9">
-					<input type="text" name="kode_pos" class="form-control input-style" placeholder="Kode Pos">
+					<input type="text" id="kode_pos" name="kode_pos" class="form-control input-style" placeholder="Kode Pos">
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="col-sm-3 control-label">No. Ponsel</label>
 				<div class="col-sm-9">
-					<input type="text" name="no_ponsel" class="form-control input-style" placeholder="No. Ponsel">
+					<input type="text" id="nomor_ponsel" name="nomor_ponsel" class="form-control input-style" placeholder="No. Ponsel">
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="col-sm-3 control-label">Wilayah</label>
 				<div class="col-sm-9">
-					<input type="text" name="Wilayah" class="form-control input-style" placeholder="Wilayah">
+					<input type="text" id="wilayah" name="wilayah" class="form-control input-style" placeholder="Wilayah">
 				</div>
 			</div>
 		</div>
@@ -174,13 +182,13 @@
 			<div class="form-group">
 				<label class="col-sm-3 control-label">Dasar</label>
 				<div class="col-sm-9">
-					<input type="text" name="dasar" class="form-control input-style" placeholder="Dasar">
+					<input type="text" id="dasar" name="dasar" class="form-control input-style" placeholder="Dasar">
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="col-sm-3 control-label">Pemohon</label>
 				<div class="col-sm-9">
-					<input type="text" name="pemohon" class="form-control input-style" placeholder="Pemohon">
+					<input type="text" id="pemohon" name="pemohon" class="form-control input-style" placeholder="Pemohon">
 				</div>
 			</div>
 			<div class="form-group pull-center">

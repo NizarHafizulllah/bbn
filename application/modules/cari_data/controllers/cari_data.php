@@ -1,9 +1,11 @@
 <?php
-class cari_data extends coba_controller{
+class cari_data extends user_controller{
 	var $controller;
 	function cari_data(){
 		$this->controller = get_class($this);
+
 		parent::__construct();
+		$this->load->helper("tanggal");
 	}
 	
 	
@@ -59,33 +61,80 @@ class cari_data extends coba_controller{
 	}
     
     
+
+
+function cek_no_rangka($no_rangka) {
+
+
+	if(empty($no_rangka)) {
+		$this->form_validation->set_message('cek_no_rangka', '%s harus diisi   ');
+		return false;
+	}
+
+	$this->db->where("nomor_rangka",$no_rangka); 
+	$this->db->where("approved","0");
+	$res = $this->db->get("daftar_bbn");
+
+	// echo "fjdkfjd k" . $this->db->last_query(); 
+	$jumlah = $res->num_rows();
+	if($jumlah > 0 ) {
+		$this->form_validation->set_message('cek_no_rangka', '%s sudah ada dan belum selesai diproses  ');
+		return false;
+	}
+}
+
+
+
+
+function cek_jenis_perubahan($jenis_perubahan) {
+
+
+	if(empty($jenis_perubahan) or  $jenis_perubahan == "0"  ) {
+		$this->form_validation->set_message('cek_jenis_perubahan', '%s harus dipilih   ');
+		return false;
+	}
+
+	 
+}
+
+
+
+
     function simpan(){
         $post = $this->input->post();
-     $data = array(
-        'jenis_perubahan' => $post['jenis_perubahan'],
-        'tanggal' => $post['tgl_bbn2'],
-         'warna' => $post['warna'],
-         'jenis' => $post['jenis'],
-         'bentuk' => $post['bentuk'],
-         'nomor_polisi' => $post['no_pol'],
-         'warna_tnkb' => $post['warna_tnkb'],
-         'nomor_mesin' => $post['no_mesin'],
-         'nomor_identitas' => $post['no_identitas'],
-         'nama' => $post['nama'],
-         'pekerjaan' => $post['perkerjaan'],
-         'alamat' => $post['alamat'],
-         'nomor_ponsel' => $post['no_ponsel'],
-         'kode_pos' => $post['kode_pos'],
-         'wilayah' => $post['wilayah'],
-         'dasar' => $post['dasar'],
-         'pemohon' => $post['pemohon'],
-         'nomor_rangka' => $post['no_rangka']
-     );  
-       $this->db->insert("daftar_bbn", $data);
-        }
+
+        $this->load->library('form_validation');
+         $this->form_validation->set_rules('jenis_perubahan','Jenis Perubahan ','callback_cek_jenis_perubahan');
+
+  		$this->form_validation->set_rules('nomor_rangka','Nomor Rangka','callback_cek_no_rangka');
+  		$this->form_validation->set_rules('tanggal','Tanggal','required');
+		
+		 
+		$this->form_validation->set_message('required', ' %s Harus diisi ');
+		
+ 		$this->form_validation->set_error_delimiters('', '<br>');
+		if($this->form_validation->run() == TRUE ) {  // validasi berhasil 
+
+			$post['tanggal'] = flipdate($post['tanggal']);
+
+			$res = $this->db->insert("daftar_bbn",$post);
+			if(!$res){
+				$ret = array("error"=>true,"message"=>"gagal " . $this->db->last_query(). " " . mysql_error() );
+			}
+			else {
+				$ret = array("error"=>false,"message"=>"DATA BERHASIL DISIMPAN");
+			}
+		}
+		else { // validasi gagal 
+			$ret = array("error"=>true,"message"=>validation_errors());
+		}
+
+
+		echo json_encode($ret);
+    
     }
 
 
-	
+}
 
 ?>
