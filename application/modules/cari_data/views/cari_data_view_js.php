@@ -19,6 +19,25 @@
 
 
 
+$("#form_data").submit(function(){
+
+                $.ajax({
+                url : '<?php echo site_url("$this->controller/simpan") ?>',
+                data : $(this).serialize(),
+                type : 'post',
+                dataType : 'json',
+                success  : function(ret){
+                    console.log(ret);
+                }
+            });
+
+    return false;
+});
+
+
+}); 
+
+/*
 $('#form_data').bootstrapValidator({
                 message: 'This value is not valid', 
                 feedbackIcons: { 
@@ -146,14 +165,14 @@ $('#form_data').bootstrapValidator({
         $('#reset').click(function() {
         $('#form_data').data('bootstrapValidator').resetForm(true);
         });
+*/
 
-
- $(.select2).select2();
+/* $(.select2).select2();
         $("#datemask").inputmask("dd/mm/yyyy", {"placeholde": "dd/mm/yyyy"}); 
 
 	});
     
-    
+    */
 
        
 
