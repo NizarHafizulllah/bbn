@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"contro",
+				"controller	(cari_data.php)"
+			],
+			[
+				"kirim",
+				"kirimemail"
+			],
+			[
+				"data",
+				"datalogin"
+			],
+			[
+				"subj",
+				"subjek"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
 				"site_",
 				"site_url(\"home"
 			],
@@ -112,10 +132,6 @@
 				"id_polda	(login.php)"
 			],
 			[
-				"data",
-				"datadaftar"
-			],
-			[
 				"CONT",
 				"controller"
 			],
@@ -126,10 +142,6 @@
 			[
 				"t_pend",
 				"t_pendaftaran_pidana"
-			],
-			[
-				"user",
-				"userdata"
 			],
 			[
 				"tiger_",
@@ -502,23 +514,19 @@
 			[
 				"qu",
 				"query"
-			],
-			[
-				"MERK",
-				"MERK_NAMA"
-			],
-			[
-				"salah",
-				"salah_modal"
-			],
-			[
-				"bena",
-				"benar_modal"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "application/modules/cek_bbn/controllers/cek_bbn.php",
+			"settings":
+			{
+				"buffer_size": 1223,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -559,24 +567,59 @@
 	[
 		"/Users/firman/htdocs/bbn",
 		"/Users/firman/htdocs/bbn/application",
-		"/Users/firman/htdocs/bbn/application/controllers",
+		"/Users/firman/htdocs/bbn/application/helpers",
+		"/Users/firman/htdocs/bbn/application/libraries",
 		"/Users/firman/htdocs/bbn/application/modules",
-		"/Users/firman/htdocs/bbn/application/modules/login",
+		"/Users/firman/htdocs/bbn/application/modules/cari_data",
+		"/Users/firman/htdocs/bbn/application/modules/cari_data/controllers",
+		"/Users/firman/htdocs/bbn/application/modules/cari_data/views",
+		"/Users/firman/htdocs/bbn/application/modules/cek_bbn",
+		"/Users/firman/htdocs/bbn/application/modules/cek_bbn/controllers",
+		"/Users/firman/htdocs/bbn/application/modules/cek_bbn/views",
 		"/Users/firman/htdocs/bbn/application/modules/login/controllers",
 		"/Users/firman/htdocs/bbn/application/modules/login/views",
+		"/Users/firman/htdocs/bbn/application/third_party",
 		"/Users/firman/htdocs/bbn/application/views",
 		"/Users/firman/htdocs/bbn/application/views/user"
 	],
 	"file_history":
 	[
-		"/Users/firman/htdocs/bbn/application/modules/login/views/login_view_js.php",
+		"/Users/firman/htdocs/bbn/application/modules/__sampah/baru_verifikasi/controllers/baru_verifikasi.php",
+		"/Users/firman/htdocs/bbn/application/modules/cek_bbn/controllers/test.html",
+		"/Users/firman/htdocs/bbn/application/modules/lupa_password/controllers/lupa_password.php",
+		"/Users/firman/htdocs/bbn/application/modules/cari_data/views/cari_data_view_js.php",
 		"/Users/firman/htdocs/bbn/application/modules/login/controllers/login.php",
-		"/Users/firman/htdocs/bbn/application/modules/login/views/lupa_password.php",
-		"/Users/firman/htdocs/bbn/application/modules/__sampah/user/controllers/user.php",
-		"/Users/firman/htdocs/bbn/application/libraries/master_controller.php",
-		"/Users/firman/htdocs/bbn/index.php",
-		"/Users/firman/htdocs/bbn/application/controllers/depan.php",
+		"/Users/firman/htdocs/bbn/application/views/user/header_view.php",
+		"/Users/firman/htdocs/bbn/application/views/user/footer_view.php",
+		"/Users/firman/htdocs/bbn/application/modules/cari_data/views/cari_data_view.php",
+		"/Users/firman/htdocs/bbn/application/modules/cari_data/controllers/cari_data.php",
+		"/Users/firman/htdocs/bbn/assets/js/scripts.js",
+		"/Users/firman/htdocs/bbn/assets/js/bootstrapValidator.min.js",
+		"/Users/firman/htdocs/bbn/application/modules/cek_bbn/controllers/cek_bbn.php",
+		"/Users/firman/htdocs/bbn/application/libraries/coba_controller.php",
+		"/Users/firman/htdocs/bbn/application/helpers/kirimemail_helper.php",
+		"/Users/firman/htdocs/bbn/lupa_password.sql",
+		"/Users/firman/htdocs/bbn/application/third_party/kirimemail.php",
+		"/Users/firman/htdocs/bbn/application/config/config.php",
+		"/Users/firman/htdocs/bbn/application/libraries/user_controller.php",
 		"/Users/firman/htdocs/bbn/application/controllers/user.php",
+		"/Users/firman/htdocs/bbn/application/libraries/Mandrill.php",
+		"/Users/firman/htdocs/bbn/application/libraries/Mailman.php",
+		"/Users/firman/htdocs/bbn/application/libraries/master_controller.php",
+		"/Users/firman/htdocs/bbn/application/libraries/oleread.inc.php",
+		"/Users/firman/htdocs/bbn/application/config/routes.php",
+		"/Users/firman/htdocs/bbn/system/core/Router.php",
+		"/Users/firman/htdocs/bbn/application/config/autoload.php",
+		"/Users/firman/htdocs/bbn/application/controllers/depan_baru.php",
+		"/Users/firman/htdocs/bbn/application/controllers/depan.php",
+		"/Users/firman/htdocs/bbn/application/controllers/test.php",
+		"/Users/firman/htdocs/bbn/application/modules/ubah_password/controllers/ubah_password.php",
+		"/Users/firman/htdocs/bbn/application/modules/cari_data/view/cari_data_view.php",
+		"/Users/firman/htdocs/bbn/application/modules/__sampah/user/controllers/user.php",
+		"/Users/firman/htdocs/bbn/application/helpers/serviceurl_helper.php",
+		"/Users/firman/htdocs/bbn/application/modules/login/views/login_view_js.php",
+		"/Users/firman/htdocs/bbn/application/modules/login/views/lupa_password.php",
+		"/Users/firman/htdocs/bbn/index.php",
 		"/Users/firman/htdocs/bbn/application/views/hell.php",
 		"/Users/firman/htdocs/bbn2/application/libraries/master_controller.php",
 		"/Users/firman/htdocs/bbn2/application/libraries/oleread.inc.php",
@@ -589,7 +632,6 @@
 		"/Users/firman/htdocs/bbn/application/views/index_view.php",
 		"/Users/firman/htdocs/bbn/application/modules/__sampah/admin_laporan/views/admin_laporan_view_js.php",
 		"/Users/firman/htdocs/bbn/application/controllers/home.php",
-		"/Users/firman/htdocs/bbn/application/modules/cek_bbn/controllers/cek_bbn.php",
 		"/Users/firman/htdocs/bbn/application/modules/__sampah/baru_cek/controllers/baru_cek.php",
 		"/Users/firman/htdocs/bbn/application/modules/__sampah/baru_cek/views/baru_cek_view.php",
 		"/Users/firman/htdocs/bbn/application/modules/__sampah/admin_verifikasi/controllers/admin_verifikasi.php",
@@ -601,16 +643,12 @@
 		"/Users/firman/htdocs/bbn/assets/css/sticky-footer.css",
 		"/Users/firman/htdocs/bbn/application/modules/login/views/login_view.php",
 		"/Users/firman/htdocs/bbn/assets/css/style.css",
-		"/Users/firman/htdocs/bbn/application/config/routes.php",
-		"/Users/firman/htdocs/bbn/application/config/autoload.php",
-		"/Users/firman/htdocs/bbn/application/libraries/Mailman.php",
 		"/Users/firman/htdocs/bbn/application/config/database.php",
 		"/Users/firman/htdocs/bbn/application/modules/__sampah/baru_verifikasi/views/baru_verifikasi_view_js.php",
 		"/Users/firman/htdocs/bbn/application/modules/__sampah/polisi_verifikasi/views/polisi_verifikasi_view_js.php",
 		"/Users/firman/htdocs/bbn/application/views/template_polisi.php",
 		"/Users/firman/htdocs/bbn/application/modules/__sampah/baru_daftar/controllers/baru_daftar.php",
 		"/Users/firman/htdocs/bbn/application/modules/__sampah/laporan/controllers/laporan.php",
-		"/Users/firman/htdocs/bbn/assets/js/scripts.js",
 		"/Users/firman/htdocs/bbn/application/views/template_baru.php",
 		"/Users/firman/htdocs/bbn/assets/css/form-elements.css",
 		"/Users/firman/htdocs/bpkbservice/application/modules/polisi_blokir_perleasing/models/pbpl_model.php",
@@ -673,30 +711,7 @@
 		"/Users/firman/htdocs/bpkbservice/application/modules/baru_daftar/views/baru_daftar_form_edit_js.php",
 		"/Users/firman/htdocs/bpkbservice/application/modules/polisi_blokir_pidana/views/polisi_blokir_pidana_detail.php",
 		"/Users/firman/htdocs/bpkbservice/application/modules/polisi_blokir_pidana/models/polisi_blokir_pidana_model.php",
-		"/Users/firman/htdocs/bpkbservice/application/modules/polisi_blokir_pidana/views/polisi_blokir_pidana_view_js.php",
-		"/Users/firman/htdocs/bpkbservice/application/modules/polisi_bolkir_pidana/controllers/polisi_bolkir_pidana.php",
-		"/Users/firman/htdocs/bpkbservice/application/modules/polisi_bolkir_pidana/models/polisi_blokir_pidana_model.php",
-		"/Users/firman/htdocs/bpkbservice/application/modules/polres_blokir_pidana/views/polres_blokir_pidana_view.php",
-		"/Users/firman/htdocs/bpkbservice/application/modules/polres_blokir_pidana/views/polres_blokir_pidana_view_js.php",
-		"/Users/firman/htdocs/bpkbservice/application/modules/baru_daftar/views/baru_daftar_view_js.php",
-		"/Users/firman/htdocs/bpkbservice/application/modules/pilih/controllers/pilih.php",
-		"/Users/firman/htdocs/bpkbservice/application/modules/login/views/login_view.php",
-		"/Users/firman/htdocs/bpkbservice/application/modules/polres_depan/views/polres_depan_view.php",
-		"/Users/firman/htdocs/bpkbservice/application/modules/verifikatur/controllers/verifikatur.php",
-		"/Users/firman/htdocs/bpkbservice/application/modules/user_polres/models/upmodel.php",
-		"/Users/firman/htdocs/bpkbservice/application/modules/user_polres/views/user_polres_view.php",
-		"/Users/firman/htdocs/bpkbservice/application/modules/user_polres/views/user_polres_view_form.php",
-		"/Users/firman/htdocs/bpkbservice/application/modules/user_polres/views/user_polres_view_form_js.php",
-		"/Users/firman/htdocs/bpkbservice/application/modules/polres_depan/controllers/polres_depan.php",
-		"/Users/firman/htdocs/bpkbservice/application/views/template.php",
-		"/Users/firman/htdocs/bpkbservice/application/controllers/general.php",
-		"/Users/firman/htdocs/bpkbservice/application/modules/user_polres/controllers/user_polres.php",
-		"/Users/firman/htdocs/servicetester/application/modules/baru_cek/controllers/baru_cek.php",
-		"/Users/firman/htdocs/servicetester/application/modules/baru_cek/views/baru_cek_view.php",
-		"/Users/firman/htdocs/bpkbservice/browsj_doc.html",
-		"/Users/firman/htdocs/servicetester/application/controllers/testlogin.php",
-		"/Users/firman/htdocs/bpkbservice/application/modules/admin_verifikasi/views/admin_verifikasi_view_js.php",
-		"/Users/firman/htdocs/bpkbservice/application/modules/admin_verifikasi/controllers/admin_verifikasi.php"
+		"/Users/firman/htdocs/bpkbservice/application/modules/polisi_blokir_pidana/views/polisi_blokir_pidana_view_js.php"
 	],
 	"find":
 	{
@@ -714,6 +729,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"cekbbn",
+			"this",
+			"$this",
 			"form",
 			"sender_email",
 			"user_id",
@@ -826,8 +844,38 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "application/modules/cek_bbn/controllers/cek_bbn.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1223,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								153,
+								153
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -880,6 +928,70 @@
 		"selected_items":
 		[
 			[
+				"baruver",
+				"application/modules/__sampah/baru_verifikasi/controllers/baru_verifikasi.php"
+			],
+			[
+				"cek",
+				"application/modules/cek_bbn/controllers/cek_bbn.php"
+			],
+			[
+				"cobacon",
+				"application/libraries/coba_controller.php"
+			],
+			[
+				"header.php",
+				"application/views/user/header_view.php"
+			],
+			[
+				"lupas",
+				"lupa_password.sql"
+			],
+			[
+				"lupapass",
+				"application/modules/lupa_password/controllers/lupa_password.php"
+			],
+			[
+				"login",
+				"application/modules/login/controllers/login.php"
+			],
+			[
+				"config.ph",
+				"application/config/config.php"
+			],
+			[
+				"coba",
+				"application/libraries/coba_controller.php"
+			],
+			[
+				"user",
+				"application/controllers/user.php"
+			],
+			[
+				"rout",
+				"application/config/routes.php"
+			],
+			[
+				"router",
+				"system/core/Router.php"
+			],
+			[
+				"ubahpas",
+				"application/modules/ubah_password/controllers/ubah_password.php"
+			],
+			[
+				"autolo",
+				"application/config/autoload.php"
+			],
+			[
+				"depan",
+				"application/controllers/depan.php"
+			],
+			[
+				"kirim",
+				"application/helpers/kirimemail_helper.php"
+			],
+			[
 				"user.php",
 				"application/modules/__sampah/user/controllers/user.php"
 			],
@@ -888,16 +1000,8 @@
 				"application/views/hell.php"
 			],
 			[
-				"user",
-				"application/controllers/user.php"
-			],
-			[
 				"index",
 				"index.php"
-			],
-			[
-				"login",
-				"application/modules/login/controllers/login.php"
 			],
 			[
 				"master",
@@ -908,20 +1012,12 @@
 				"application/config/routes.php"
 			],
 			[
-				"autolo",
-				"application/config/autoload.php"
-			],
-			[
 				"stick",
 				"assets/css/sticky-footer.css"
 			],
 			[
 				"database",
 				"application/config/database.php"
-			],
-			[
-				"baruver",
-				"application/modules/baru_verifikasi/controllers/baru_verifikasi.php"
 			],
 			[
 				"coremod",
