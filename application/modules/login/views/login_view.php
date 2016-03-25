@@ -30,8 +30,8 @@
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo base_url(); ?>assets/ico/apple-touch-icon-72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="<?php echo base_url(); ?>assets/ico/apple-touch-icon-57-precomposed.png">
 
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap-dialog.min.css">
 
- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css">
  
 
     </head>
@@ -221,8 +221,8 @@
         <script src="<?php echo base_url(); ?>assets/js/jquery.backstretch.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/jquery.md5.js"></script>
 		<script src="<?php echo base_url(); ?>assets/js/bootstrapValidator.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets/js/bootstrap-dialog.min.js"></script>
         
- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/js/bootstrap-dialog.min.js"></script>
         <?php 
         $this->load->view("login_view_js");
         ?>        

@@ -37,6 +37,7 @@ folder instead of downloading all of them to reduce the load. -->
 
 
 
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap-dialog.min.css">
 
 
     
@@ -57,6 +58,8 @@ folder instead of downloading all of them to reduce the load. -->
     <!-- AdminLTE for demo purposes -->
     <script src="<?php echo base_url('assets/dist/js/demo.js'); ?>"></script>
     <script src="<?php echo base_url(); ?>assets/js/bootstrapValidator.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/bootstrap-dialog.min.js"></script>
+
 
 
 	</head>

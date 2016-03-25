@@ -28,6 +28,30 @@ $("#form_data").submit(function(){
                 dataType : 'json',
                 success  : function(ret){
                     console.log(ret);
+
+
+                if(ret.error == false) { 
+                    BootstrapDialog.alert({
+                            type: BootstrapDialog.TYPE_PRIMARY,
+                            title: 'Informasi',
+                            message: ret.message // ,
+
+                            // callback: function(result) {
+                            //         location.href='<?php echo site_url("user"); ?>';
+                            // }
+                             
+                             
+                            } 
+                        ); 
+                }
+                else {
+                    BootstrapDialog.alert({
+                                                type: BootstrapDialog.TYPE_DANGER,
+                                                title: 'Error',
+                                                message: ret.message
+                                                 
+                                            }); 
+                    }
                 }
             });
 
