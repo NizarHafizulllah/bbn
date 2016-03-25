@@ -59,9 +59,8 @@ $("#form_data").submit(function(){
 });
 
 
-}); 
 
-/*
+
 $('#form_data').bootstrapValidator({
                 message: 'This value is not valid', 
                 feedbackIcons: { 
@@ -175,7 +174,7 @@ $('#form_data').bootstrapValidator({
                                 message : 'Data tidak boleh kosong'
                             }
                         }
-                    },
+                    }
 
 
                     
@@ -184,7 +183,13 @@ $('#form_data').bootstrapValidator({
                     
                 }
                 
-            });
+            } );
+
+
+}); 
+
+/*
+
             
         $('#reset').click(function() {
         $('#form_data').data('bootstrapValidator').resetForm(true);
