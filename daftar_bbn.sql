@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 25, 2016 at 08:22 AM
+-- Generation Time: Mar 25, 2016 at 08:24 AM
 -- Server version: 5.6.24
 -- PHP Version: 5.5.24
 
@@ -45,7 +45,8 @@ CREATE TABLE IF NOT EXISTS `daftar_bbn` (
   `wilayah` varchar(50) NOT NULL,
   `dasar` varchar(100) NOT NULL,
   `pemohon` varchar(50) NOT NULL,
-  `nomor_rangka` varchar(50) NOT NULL
+  `nomor_rangka` varchar(50) NOT NULL,
+  `approved` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
