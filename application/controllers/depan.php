@@ -12,6 +12,8 @@ class Depan extends master_controller  {
 		$this->render();
 	}
 
+	
+
 
 
 
