@@ -6,6 +6,7 @@ class daftar extends user_controller{
 
 		parent::__construct();
 		$this->load->helper("tanggal");
+		$this->load->model("daftar_model","dm");
 	}
 	
 	
@@ -117,6 +118,10 @@ function cek_jenis_perubahan($jenis_perubahan) {
 
 			$post['tanggal'] = flipdate($post['tanggal']);
 
+			$login = $this->session->userdata("login");
+
+			$post['user_id'] = $login['id_user'];
+
 			$res = $this->db->insert("daftar_bbn",$post);
 			if(!$res){
 				$ret = array("error"=>true,"message"=>"gagal " . $this->db->last_query(). " " . mysql_error() );
@@ -134,6 +139,87 @@ function cek_jenis_perubahan($jenis_perubahan) {
     
     }
 
+
+
+ function listdata(){
+    	$data_array=array();
+		$content = $this->load->view($this->controller."_list_view",$data_array,true);
+
+		$this->set_subtitle("DATA PENDAFTARAN BBN");
+		$this->set_title("DATA PENDAFTARAN BBN");
+		$this->set_content($content);
+		$this->cetak();
+    }
+
+
+
+    function get_data() {
+
+    	$userdata = $this->session->userdata("login");
+    	// show_array($userdata);
+
+    	$draw = $_REQUEST['draw']; // get the requested page 
+    	$start = $_REQUEST['start'];
+        $limit = $_REQUEST['length']; // get how many rows we want to have into the grid 
+        $sidx = isset($_REQUEST['order'][0]['column'])?$_REQUEST['order'][0]['column']:0; // get index row - i.e. user click to sort 
+        $sord = isset($_REQUEST['order'][0]['dir'])?$_REQUEST['order'][0]['dir']:"asc"; // get the direction if(!$sidx) $sidx =1;  
+        
+        // $no_rangka = $_REQUEST['columns'][5]['search']['value'];
+        // $tanggal_awal = $_REQUEST['columns'][4]['search']['value'];
+        // $tanggal_akhir = $_REQUEST['columns'][6]['search']['value'];
+        // $status = $_REQUEST['columns'][7]['search']['value'];
+
+
+      //  order[0][column]
+        $req_param = array (
+				"sort_by" => $sidx,
+				"sort_direction" => $sord,
+				"limit" => null,
+				"user_id" => $userdata['id_user']
+				 
+		);     
+           
+        $row = $this->dm->data($req_param)->result_array();
+		
+        $count = count($row); 
+       
+        
+        $req_param['limit'] = array(
+                    'start' => $start,
+                    'end' => $limit
+        );
+          
+        
+        $result = $this->dm->data($req_param)->result_array();
+        
+
+       
+        $arr_data = array();
+        foreach($result as $row) : 
+		// $daft_id = $row['daft_id'];
+        	 
+
+        	 
+        	$arr_data[] = array(
+        		$row['jenis_perubahan'],
+        		flipdate($row['tanggal']), 
+        		$row['nomor_rangka'],
+        		$row['nomor_mesin'],
+        		$row['pemohon'],
+        		$row['warna_tnkb'],
+        		$row['approved']
+         			 
+        		  				);
+        endforeach;
+
+         $responce = array('draw' => $draw, // ($start==0)?1:$start,
+        				  'recordsTotal' => $count, 
+        				  'recordsFiltered' => $count,
+        				  'data'=>$arr_data
+        	);
+         
+        echo json_encode($responce); 
+    }
 
 }
 

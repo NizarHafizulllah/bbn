@@ -3,6 +3,14 @@
 	{
 		"selected_items":
 		[
+			[
+				"user",
+				"userdata"
+			],
+			[
+				"mysql_err",
+				"mysql_error"
+			]
 		]
 	},
 	"buffers":
@@ -40,14 +48,53 @@
 	},
 	"expanded_folders":
 	[
-		"/C/xampp/htdocs/bbn"
+		"/C/xampp/htdocs/bbn",
+		"/C/xampp/htdocs/bbn/application",
+		"/C/xampp/htdocs/bbn/application/modules",
+		"/C/xampp/htdocs/bbn/application/modules/__sampah/baru_verifikasi",
+		"/C/xampp/htdocs/bbn/application/modules/__sampah/baru_verifikasi/controllers",
+		"/C/xampp/htdocs/bbn/application/modules/__sampah/baru_verifikasi/models",
+		"/C/xampp/htdocs/bbn/application/modules/__sampah/baru_verifikasi/views",
+		"/C/xampp/htdocs/bbn/application/modules/daftar/controllers",
+		"/C/xampp/htdocs/bbn/application/modules/daftar/models",
+		"/C/xampp/htdocs/bbn/application/modules/daftar/views",
+		"/C/xampp/htdocs/bbn/application/views",
+		"/C/xampp/htdocs/bbn/application/views/user",
+		"/C/xampp/htdocs/bbn/assets",
+		"/C/xampp/htdocs/bbn/assets/bootstrap",
+		"/C/xampp/htdocs/bbn/assets/bootstrap/css",
+		"/C/xampp/htdocs/bbn/assets/bootstrap/js"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/bbn/application/modules/daftar/views/daftar_view.php",
+		"/C/xampp/htdocs/bbn/application/views/user/header_view.php",
+		"/C/xampp/htdocs/bbn/application/modules/__sampah/baru_verifikasi/views/baru_verifikasi_view.php",
+		"/C/xampp/htdocs/bbn/application/modules/__sampah/baru_verifikasi/controllers/baru_verifikasi.php",
+		"/C/xampp/htdocs/bbn/application/modules/daftar/views/daftar_list_view.php",
+		"/C/xampp/htdocs/bbn/application/modules/daftar/views/daftar_list_view_js.php",
+		"/C/xampp/htdocs/bbn/application/views/template_baru.php",
+		"/C/xampp/htdocs/bbn/application/modules/daftar/models/daftar_model.php",
+		"/C/xampp/htdocs/bbn/application/modules/daftar/controllers/daftar.php",
+		"/C/xampp/htdocs/bbn/assets/css/jquery.dataTables.min.css",
+		"/C/xampp/htdocs/bbn/application/modules/__sampah/baru_verifikasi/views/baru_verifikasi_view_js.php",
+		"/C/xampp/htdocs/bbn/application/modules/__sampah/baru_verifikasi/models/ver_model.php",
+		"/C/xampp/htdocs/bbn/application/modules/__sampah/baru_verifikasi/models/ver_model.backup.php",
+		"/C/xampp/htdocs/bbn/application/modules/__sampah/baru_verifikasi/views/baru_verifikasi_view_detail.php",
+		"/C/xampp/htdocs/bbn/application/modules/cari_data/controllers/cari_data.php",
+		"/C/xampp/htdocs/bbn/application/modules/cari_data/views/cari_data_view.php",
+		"/C/xampp/htdocs/bbn/application/modules/__sampah/baru_daftar/controllers/baru_daftar.php",
+		"/C/xampp/htdocs/bbn/application/modules/login/views/login_view_js.php",
+		"/C/xampp/htdocs/bbn/application/modules/login/views/login_view.php",
+		"/C/xampp/htdocs/bbn/application/modules/cari_data/views/cari_data_view_js.php",
+		"/C/xampp/htdocs/bbn/application/libraries/coba_controller.php",
+		"/C/xampp/htdocs/bbn/application/libraries/user_controller.php",
+		"/C/xampp/htdocs/bbn/application/modules/lupa_password/controllers/lupa_password.php",
+		"/C/Users/Arie/AppData/Local/Temp/[kat.cr]sqlyog.ultimate.v10.00.with.key.h33t.iahq76.torrent"
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -61,6 +108,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"name",
+			"no_rangka"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -85,11 +134,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 22.0
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 30.0
 	},
 	"layout":
 	{
@@ -122,7 +171,7 @@
 	"project": "bbn.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 40.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -131,6 +180,26 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"headerview",
+				"application\\views\\user\\header_view.php"
+			],
+			[
+				"loginviewjw",
+				"application\\modules\\login\\views\\login_view_js.php"
+			],
+			[
+				"loginview",
+				"application\\modules\\login\\views\\login_view.php"
+			],
+			[
+				"caridata.php",
+				"application\\modules\\cari_data\\controllers\\cari_data.php"
+			],
+			[
+				"lupaspass",
+				"application\\modules\\lupa_password\\controllers\\lupa_password.php"
+			]
 		],
 		"width": 0.0
 	},
