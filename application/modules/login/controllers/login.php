@@ -198,7 +198,7 @@ function verifikasi(){
 		 // echo $this->db->last_query(); exit;
 
 		 if($res->num_rows()==0) {
-		 	$ret = array("error"=>true,"message"=>"Kombinasi Email Dan Password Tidak Gikenali");
+		 	$ret = array("error"=>true,"message"=>"Kombinasi Email Dan Password Tidak Dikenali");
 
 		 }
 		 else {
@@ -207,9 +207,16 @@ function verifikasi(){
 
 		 	if($member->aktif == 1) {
 		 		
+				$jj = array (
+					'login' => true,
+					'id_user' => $member->id,
+					'email' => $member->email,
+					'nama' => $member->nama
+					);
 
-		 		$this->session->userdata("login",true);
+		 		$this->session->userdata('login', true);
 		 		$ret = array("error"=>false,"message"=>"Login sukses.Klik Oke untuk melanjutkan");
+				
 
 
 		 	}

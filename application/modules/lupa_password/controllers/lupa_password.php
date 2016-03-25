@@ -55,14 +55,14 @@ class lupa_password extends coba_controller {
 			
 				$this->kirim($data_member->email,'Reset Pasword',$email_body,false);
 			
-			site_url('login');
+			$this->load->view('succes_send_hash');
 			
 		}
 		else{
-			$ret = array("error"=>true,"message"=>$email." tidak pernah terdaftar sebelumnya");
+			
 		}
 		
-		echo json_encode($ret);
+		
 	}
 	
 	

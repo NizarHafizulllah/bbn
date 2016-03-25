@@ -10,13 +10,19 @@ class user extends coba_controller {
 	}
 	
 		function index(){
-		$data_array=array();
+		
+				$data_array=array();
 		$content = $this->load->view("user/index_view",$data_array,true);
 			
 		$this->set_subtitle("DASHBOARD");
 		$this->set_title("DASHBOARD");
 		$this->set_content($content);
 		$this->cetak();
+
+
+				
+			
+		
 	}
 
 

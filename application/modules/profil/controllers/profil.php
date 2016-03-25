@@ -1,28 +1,21 @@
 <?php
-class cari_data extends coba_controller{
+class profil extends coba_controller{
 	var $controller;
-	function cari_data(){
+	function profil(){
 		$this->controller = get_class($this);
 		parent::__construct();
 	}
 	
 	
 	function index(){
-		
-//		$cek_session = $this->session->userdata('session');
-//			if(!empty($cek)){
-				$data_array=array();
+
+		$data_array=array();
 		$content = $this->load->view($this->controller."_view",$data_array,true);
 
 		$this->set_subtitle("Cari Data");
 		$this->set_title("Cari Data");
 		$this->set_content($content);
 		$this->cetak();
-//			}else{
-//				redirect('login');
-//			}
-		
-		
 	}
 	
 }
