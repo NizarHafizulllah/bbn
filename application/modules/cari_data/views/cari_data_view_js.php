@@ -59,7 +59,6 @@ $("#form_data").submit(function(){
 });
 
 
-}); 
 
 
 $('#form_data').bootstrapValidator({
@@ -184,7 +183,13 @@ $('#form_data').bootstrapValidator({
                     
                 }
                 
-            });
+            } );
+
+
+}); 
+
+/*
+
             
         $('#reset').click(function() {
         $('#form_data').data('bootstrapValidator').resetForm(true);
