@@ -1,7 +1,7 @@
 <?php
-class cari_data extends user_controller{
+class daftar extends user_controller{
 	var $controller;
-	function cari_data(){
+	function daftar(){
 		$this->controller = get_class($this);
 
 		parent::__construct();
@@ -16,8 +16,8 @@ class cari_data extends user_controller{
 				$data_array=array();
 		$content = $this->load->view($this->controller."_view",$data_array,true);
 
-		$this->set_subtitle("Cari Data");
-		$this->set_title("Cari Data");
+		$this->set_subtitle("Daftar BBN");
+		$this->set_title("Daftar BBN");
 		$this->set_content($content);
 		$this->cetak();
 //			}else{
