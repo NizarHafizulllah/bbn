@@ -61,7 +61,7 @@ $("#form_data").submit(function(){
 
 }); 
 
-/*
+
 $('#form_data').bootstrapValidator({
                 message: 'This value is not valid', 
                 feedbackIcons: { 
@@ -175,7 +175,7 @@ $('#form_data').bootstrapValidator({
                                 message : 'Data tidak boleh kosong'
                             }
                         }
-                    },
+                    }
 
 
                     
