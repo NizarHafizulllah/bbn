@@ -102,28 +102,28 @@
     <script src="<?php echo base_url('assets/dist/js/demo.js'); ?>"></script>
 	
 	<script>
-	$(document).ready(function(){
+//	$(document).ready(function(){
 		
 		
 		
 		
-		function disabled(){
-		var jenis_perubahan = $('#jenis_perubahan').val();
-		if (jenis_perubahan == '0'){
-			$('#data_umum').slideUp(1000);
-			$('#pemilik').slideUp(1000);
-		}else if(jenis_perubahan == '1'){
-			$('#data_umum').slideDown(1000);
-			$('#pemilik').slideUp(1000);
-		}else{
-			$('#pemilik').slideDown(1000);
-			$('#data_umum').slideUp(1000);
-		}
-	}
-		
-	$('#jenis_perubahan').change(disabled);
-	disabled();
-	});
+//		function disabled(){
+//		var jenis_perubahan = $('#jenis_perubahan').val();
+//		if (jenis_perubahan == '0'){
+//			$('#data_umum').slideUp(1000);
+//			$('#pemilik').slideUp(1000);
+//		}else if(jenis_perubahan == '1'){
+//			$('#data_umum').slideDown(1000);
+//			$('#pemilik').slideUp(1000);
+//		}else{
+//			$('#pemilik').slideDown(1000);
+//			$('#data_umum').slideUp(1000);
+//		}
+//	}
+//		
+//	$('#jenis_perubahan').change(disabled);
+//	disabled();
+//	});
 		
 	
 	</script>

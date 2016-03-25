@@ -1,6 +1,6 @@
 <?php 
 session_start();
-class Login extends CI_Controller {
+class Login extends coba_controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->helper("tanggal");
@@ -20,6 +20,7 @@ class Login extends CI_Controller {
 	}
 	
 
+	
 function cek_email($email) {
 	$this->db->where("email",$email);
 	$jumlah = $this->db->get("members")->num_rows();
@@ -28,6 +29,8 @@ function cek_email($email) {
 		return false;
 	}
 }
+	
+
 
 
 
@@ -46,54 +49,9 @@ function cek_password($password) {
 
 
 }
-	function send_hash_password(){
-		$post = $this->input->post();
-		// $this->db->where['']
-		$email = $post['email'];
-//		$cek_data = $this->db->where('email',$post['email'])->num_rows();
-		$this->db->where("email",$post['email'])	;
-		$rs = $this->db->get("members"); 
-		if($rs->num_rows() == 1){
-			
-			$data_member = $rs->row();
-//			/$data['id'] = ' ';
-			$data['date'] = date('Y-m-d h:i:s');
-			$data['id_user'] = $data_member->id_use; //$this->db->query('select id from members where email = '.$email);
-			$data['hash'] = md5(date('Ymdhis').'r^7dfjdfdkf');
-			$user_id = $data['id_user'];
-			$hash = $data['hash'];
-			$date = $data['date'];
-			
-			$email_body = "<p>Kami Telah Menerima Permintaan <b>Recovery Password<b> anda <p>
-				        	<p>
-				        		silahkan klik link ". anchor("login/cek_hash?id_user=$user_id&hash=$hash")  ."
-				        	</p>";
-			
-			$res = $this->db->insert('lupa_password', $data);
-			
-			$ret = array("error"=>false, "message"=>"Permintaan Anda Telah Di Konfirmasi <br/> Silahkan Cek Email ".$email." Untuk Melanjutkan");
-			
-			$this->load->library('email');
-			
-		}
-		else{
-			$ret = array("error"=>true,"message"=>$email." tidak pernah terdaftar sebelumnya");
-		}
-		
-		echo json_encode($ret);
-	}
+
 	
-	function cek_hash(){
-		$get = $this->input->get();
-		$this->db->where("id_user",$get['id_user']);
-		$this->db->where("hash",$get['hash']);
-		
-		$rs = $this->db->get('lupa_password');
-		
-		if($rs->num_rows() == 1){
-			
-		}
-	}
+
 
 	function register(){
 		//sleep(1);
@@ -136,8 +94,10 @@ function cek_password($password) {
 				
 
 				$res = $this->db->insert("aktivasi",$data_validasi);
+				
+				$this->kirim($post['email'],'Reset Pasword',$email_body,false);
 
-				$this->load->library('email');
+				// $this->load->library('email');
 
  
 
@@ -175,6 +135,9 @@ function cek_password($password) {
 	}
 
 
+	function change_password_succes(){
+		$this->load->view('change_password_succes');
+	}
 
 function verifikasi(){
 	$get  = $this->input->get();
@@ -182,10 +145,12 @@ function verifikasi(){
 	$this->db->where("hash",$get['hash']);
 	$this->db->where("valid",1);
 
-	$jumlah = $this->db->get("aktivasi")->num_rows();
+	$rs = $this->db->get("aktivasi");
+		
+		
 	//$jumlah = 1;
 
-	if($jumlah == 1 ) {
+	if($rs->num_rows() == 1 ) {
 		
 		// update tabel validasi
 
@@ -216,9 +181,6 @@ function verifikasi(){
 }
 
 
-    function Lupa_Password(){
-        $this->load->view("lupa_password");
-    }
     function ubah_Password(){
         $this->load->view("ubah_password");
     }
@@ -236,7 +198,7 @@ function verifikasi(){
 		 // echo $this->db->last_query(); exit;
 
 		 if($res->num_rows()==0) {
-		 	$ret = array("error"=>true,"message"=>"Kombinasi Email dan password tidak dikenali");
+		 	$ret = array("error"=>true,"message"=>"Kombinasi Email Dan Password Tidak Gikenali");
 
 		 }
 		 else {
@@ -263,6 +225,21 @@ function verifikasi(){
 		 
 		 
 	}
+	
+		function cekEmail(){
+		$email = $this->input->post('email');
+		$valid = true;
+		$query = $this->db->where('email', $email);
+		$jumlah = $this->db->get("members")->num_rows();	
+		if($jumlah > 0) {
+			$valid = false;
+		}
+		
+		echo json_encode(array('valid' => $valid));
+	
+	}
+	
+
 
 }
 

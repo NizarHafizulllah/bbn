@@ -3,6 +3,8 @@ session_start();
 class ubah_password extends CI_Controller{
 	function __construct(){
 		parent::__construct();
+
+		$this->load->helper('url');
 		//$this->load->helper("serviceurl");
 		
 	}
@@ -38,7 +40,11 @@ function update_password(){
 	$this->db->where('id', $id);
 	$this->db->update('members', $data);
 	
+<<<<<<< HEAD
 	$this->load->view('login_view');
+=======
+	$this->load->view('change_password_succes');
+>>>>>>> e88f0d06c8c323e9b26a04cd158a06c5eca6aaea
 }
 	
 }

@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/font-awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/form-elements.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
+		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrapValidator.min.css">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,7 +32,7 @@
 
 
  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css">
-
+ 
 
     </head>
 
@@ -109,7 +110,7 @@
                                         
                                         </div>
 				                        <button type="submit" class="btn">Sign In!</button>
-                                       <a href="<?php echo site_url('login/lupa_password'); ?>"><u>Lupa Password</u></a>
+                                       <a href="<?php echo site_url('lupa_password'); ?>"><u>Lupa Password</u></a>
                                       
 				                    </form>
 			                    </div>
@@ -219,6 +220,7 @@
         <script src="<?php echo base_url(); ?>assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/jquery.backstretch.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/jquery.md5.js"></script>
+		<script src="<?php echo base_url(); ?>assets/js/bootstrapValidator.min.js"></script>
         
  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/js/bootstrap-dialog.min.js"></script>
         <?php 
