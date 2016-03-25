@@ -1,6 +1,6 @@
 <?php 
 session_start();
-class lupa_password extends coba_controller {
+class lupa_password extends user_controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->helper("tanggal");

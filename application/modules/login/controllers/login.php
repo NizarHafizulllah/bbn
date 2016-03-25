@@ -213,7 +213,7 @@ function verifikasi(){
 					'nama' => $member->nama
 					);
 
-		 		$this->session->set_userdata('login', $jj);
+		 		$this->session->set_userdata('login', true);
 
 		 		$datalogin = $this->session->userdata("login");
 

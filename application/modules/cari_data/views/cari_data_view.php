@@ -51,7 +51,7 @@
 					<div class="panel-body">
 						<!-- Jenis Perubahan Dropdown -->
 					<div class="form-group">
-                    <select class="form-control select2" style="width: 100%;" id="jenis_perubahan">
+                    <select class="form-control select2" style="width: 100%;" id="jenis_perubahan" name="jenis_perubahan">
 						<option selected="selected" value="0">==Pilih Satu==</option>
                       <option value="1">Ubah Data Umum</option>
                       <option value="2">Balik Nama Pemilik</option>
