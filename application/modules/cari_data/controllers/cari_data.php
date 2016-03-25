@@ -57,8 +57,35 @@ class cari_data extends coba_controller{
 			//show_array($ret_service);
 			echo $ret_service;
 	}
+    
+    
+    function simpan(){
+        $post = $this->input->post();
+     $data = array(
+        'jenis_perubahan' => $post['jenis_perubahan'],
+        'tanggal' => $post['tgl_bbn2'],
+         'warna' => $post['warna'],
+         'jenis' => $post['jenis'],
+         'bentuk' => $post['bentuk'],
+         'nomor_polisi' => $post['no_pol'],
+         'warna_tnkb' => $post['warna_tnkb'],
+         'nomor_mesin' => $post['no_mesin'],
+         'nomor_identitas' => $post['no_identitas'],
+         'nama' => $post['nama'],
+         'pekerjaan' => $post['perkerjaan'],
+         'alamat' => $post['alamat'],
+         'nomor_ponsel' => $post['no_ponsel'],
+         'kode_pos' => $post['kode_pos'],
+         'wilayah' => $post['wilayah'],
+         'dasar' => $post['dasar'],
+         'pemohon' => $post['pemohon'],
+         'nomor_rangka' => $post['no_rangka']
+     );  
+       $this->db->insert("daftar_bbn", $data);
+        }
+    }
 
 
 	
-}
+
 ?>

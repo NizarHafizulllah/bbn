@@ -49,9 +49,10 @@
 						<div class="panel-title">Jenis Perubahan</div>
 					</div>
 					<div class="panel-body">
+                        
 						<!-- Jenis Perubahan Dropdown -->
 					<div class="form-group">
-                    <select class="form-control select2" style="width: 100%;" id="jenis_perubahan">
+                    <select class="form-control select2" style="width: 100%;" id="jenis_ubah">
 						<option selected="selected" value="0">==Pilih Satu==</option>
                       <option value="1">Ubah Data Umum</option>
                       <option value="2">Balik Nama Pemilik</option>
@@ -59,10 +60,14 @@
                   </div>
 					</div>
 				</div>
-            <form id="form_data" class="form-horizontal" method="post" action="#" role="form">
+                <!--  -->
+            
 				
 		<!-- Data Pemilik -->
-
+                <form id="form_data" class="form-horizontal" method="post" action="<?php echo site_url('cari_data/simpan'); ?>" role="form">
+                    
+                    <input type="hidden" name="jenis_perubahan" id="jenis_perubahan">
+                    <input type="hidden" name="no_rangka" id="no_rangka">
 				
 		<div class="panel panel-primary">
 			<div class="panel-heading">
@@ -72,7 +77,7 @@
 		<div class="form-group">
 			<label class="col-sm-3 control-label">Tanggal BBN2</label>
 			<div class="col-sm-9">
-				<input type="text" name="tgl_bbn2" class="form-control input-style" id="tgl_bbn2" placeholder="Tanggal BBN2">
+				<input type="text" name="tgl_bbn2" class="form-control input-style" id="date-mask" placeholder="Tanggal BBN2"  data-inputmask= "'alias' : 'dd/mm/yy'" data-mask>
 			</div>
 		</div>
 		<div class="form-group">
