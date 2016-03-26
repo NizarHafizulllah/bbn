@@ -23,6 +23,7 @@ $userdata = $this->session->userdata('login');
                  <form class="form-horizontal" role="form">     
       <div class="box box-primary" id="bagian_form">
             <div class="box-header with-border">
+            <i class="fa fa-user"></i>
               <h3 class="box-title">Profil</h3>
               <div class="box-tools pull-right">
                 <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
@@ -86,6 +87,7 @@ $userdata = $this->session->userdata('login');
                  <form id="change_password" class="form-horizontal" method="post" action="<?php echo site_url('profil/cek_password'); ?>" role="form">     
       <div class="box box-primary" id="bagian_form">
             <div class="box-header with-border">
+            <i class="fa fa-lock"></i>
               <h3 class="box-title">Keamanan</h3>
               <div class="box-tools pull-right">
                 <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
