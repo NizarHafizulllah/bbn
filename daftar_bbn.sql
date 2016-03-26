@@ -1,33 +1,27 @@
--- phpMyAdmin SQL Dump
--- version 4.4.3
--- http://www.phpmyadmin.net
---
--- Host: localhost
--- Generation Time: Mar 25, 2016 at 08:24 AM
--- Server version: 5.6.24
--- PHP Version: 5.5.24
+/*
+SQLyog Ultimate v10.00 Beta1
+MySQL - 5.6.20 : Database - bbndb
+*********************************************************************
+*/
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
---
--- Database: `bbndb`
---
+/*!40101 SET SQL_MODE=''*/;
 
--- --------------------------------------------------------
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`bbndb` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
---
--- Table structure for table `daftar_bbn`
---
+USE `bbndb`;
 
-CREATE TABLE IF NOT EXISTS `daftar_bbn` (
-  `id` int(11) NOT NULL,
+/*Table structure for table `daftar_bbn` */
+
+DROP TABLE IF EXISTS `daftar_bbn`;
+
+CREATE TABLE `daftar_bbn` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `jenis_perubahan` varchar(5) NOT NULL,
   `tanggal` date NOT NULL,
   `warna` varchar(25) NOT NULL,
@@ -46,28 +40,14 @@ CREATE TABLE IF NOT EXISTS `daftar_bbn` (
   `dasar` varchar(100) NOT NULL,
   `pemohon` varchar(50) NOT NULL,
   `nomor_rangka` varchar(50) NOT NULL,
-  `approved` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `approved` int(11) NOT NULL DEFAULT '0',
+  `user_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
---
--- Indexes for dumped tables
---
+/*Data for the table `daftar_bbn` */
 
---
--- Indexes for table `daftar_bbn`
---
-ALTER TABLE `daftar_bbn`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `daftar_bbn`
---
-ALTER TABLE `daftar_bbn`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

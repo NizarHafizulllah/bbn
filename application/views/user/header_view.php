@@ -20,8 +20,11 @@ $userdata = $this->session->userdata('login');
 	  <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/AdminLTE.min.css'); ?>">
 	  
 	  <link rel="stylesheet" href="<?php echo base_url('assets/plugins/select2/select2.min.css'); ?>">
+        
+       <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrapValidator.min.css">
+
     <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
+folder instead of downloading all of them to reduce the load. -->
 	  <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/skins/_all-skins.min.css'); ?>">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -34,13 +37,18 @@ $userdata = $this->session->userdata('login');
 
 
 
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap-dialog.min.css">
 
 
-
+    
     <!-- jQuery 2.1.4 -->
     <script src="<?php echo base_url('assets/plugins/jQuery/jQuery-2.1.4.min.js'); ?>"></script>
     <!-- Bootstrap 3.3.5 -->
     <script src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js'); ?>"></script>
+        <!-- mask -->
+    <script src="<?php echo base_url(); ?>assets/plugins/input-mask/jquery.inputmask.js"></script>
+    <script src="<?php echo base_url(); ?>assets/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+    <script src="<?php echo base_url(); ?>assets/plugins/input-mask/jquery.inputmask.extensions.js"></script>
     <!-- SlimScroll -->
     <script src="<?php echo base_url('assets/plugins/slimScroll/jquery.slimscroll.min.js'); ?>"></script>
     <!-- FastClick -->
@@ -49,6 +57,9 @@ $userdata = $this->session->userdata('login');
     <script src="<?php echo base_url('assets/dist/js/app.min.js'); ?>"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="<?php echo base_url('assets/dist/js/demo.js'); ?>"></script>
+    <script src="<?php echo base_url(); ?>assets/js/bootstrapValidator.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/bootstrap-dialog.min.js"></script>
+
 
 
 	</head>

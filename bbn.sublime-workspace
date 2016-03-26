@@ -4,6 +4,7 @@
 		"selected_items":
 		[
 			[
+<<<<<<< HEAD
 				"contro",
 				"controller	(cari_data.php)"
 			],
@@ -514,6 +515,14 @@
 			[
 				"qu",
 				"query"
+=======
+				"user",
+				"userdata"
+			],
+			[
+				"mysql_err",
+				"mysql_error"
+>>>>>>> 61ac9dfd3ef8180b1a6f0df2e62a99e3d90918e9
 			]
 		]
 	},
@@ -535,23 +544,18 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 247.0,
-		"last_filter": "install",
+		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
-			[
-				"install",
-				"Package Control: Install Package"
-			]
 		],
-		"width": 593.0
+		"width": 0.0
 	},
 	"console":
 	{
-		"height": 139.0,
+		"height": 0.0,
 		"history":
 		[
-			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 		]
 	},
 	"distraction_free":
@@ -565,6 +569,7 @@
 	},
 	"expanded_folders":
 	[
+<<<<<<< HEAD
 		"/Users/firman/htdocs/bbn",
 		"/Users/firman/htdocs/bbn/application",
 		"/Users/firman/htdocs/bbn/application/helpers",
@@ -712,10 +717,55 @@
 		"/Users/firman/htdocs/bpkbservice/application/modules/polisi_blokir_pidana/views/polisi_blokir_pidana_detail.php",
 		"/Users/firman/htdocs/bpkbservice/application/modules/polisi_blokir_pidana/models/polisi_blokir_pidana_model.php",
 		"/Users/firman/htdocs/bpkbservice/application/modules/polisi_blokir_pidana/views/polisi_blokir_pidana_view_js.php"
+=======
+		"/C/xampp/htdocs/bbn",
+		"/C/xampp/htdocs/bbn/application",
+		"/C/xampp/htdocs/bbn/application/modules",
+		"/C/xampp/htdocs/bbn/application/modules/__sampah/baru_verifikasi",
+		"/C/xampp/htdocs/bbn/application/modules/__sampah/baru_verifikasi/controllers",
+		"/C/xampp/htdocs/bbn/application/modules/__sampah/baru_verifikasi/models",
+		"/C/xampp/htdocs/bbn/application/modules/__sampah/baru_verifikasi/views",
+		"/C/xampp/htdocs/bbn/application/modules/daftar/controllers",
+		"/C/xampp/htdocs/bbn/application/modules/daftar/models",
+		"/C/xampp/htdocs/bbn/application/modules/daftar/views",
+		"/C/xampp/htdocs/bbn/application/views",
+		"/C/xampp/htdocs/bbn/application/views/user",
+		"/C/xampp/htdocs/bbn/assets",
+		"/C/xampp/htdocs/bbn/assets/bootstrap",
+		"/C/xampp/htdocs/bbn/assets/bootstrap/css",
+		"/C/xampp/htdocs/bbn/assets/bootstrap/js"
+	],
+	"file_history":
+	[
+		"/C/xampp/htdocs/bbn/application/modules/daftar/views/daftar_view.php",
+		"/C/xampp/htdocs/bbn/application/views/user/header_view.php",
+		"/C/xampp/htdocs/bbn/application/modules/__sampah/baru_verifikasi/views/baru_verifikasi_view.php",
+		"/C/xampp/htdocs/bbn/application/modules/__sampah/baru_verifikasi/controllers/baru_verifikasi.php",
+		"/C/xampp/htdocs/bbn/application/modules/daftar/views/daftar_list_view.php",
+		"/C/xampp/htdocs/bbn/application/modules/daftar/views/daftar_list_view_js.php",
+		"/C/xampp/htdocs/bbn/application/views/template_baru.php",
+		"/C/xampp/htdocs/bbn/application/modules/daftar/models/daftar_model.php",
+		"/C/xampp/htdocs/bbn/application/modules/daftar/controllers/daftar.php",
+		"/C/xampp/htdocs/bbn/assets/css/jquery.dataTables.min.css",
+		"/C/xampp/htdocs/bbn/application/modules/__sampah/baru_verifikasi/views/baru_verifikasi_view_js.php",
+		"/C/xampp/htdocs/bbn/application/modules/__sampah/baru_verifikasi/models/ver_model.php",
+		"/C/xampp/htdocs/bbn/application/modules/__sampah/baru_verifikasi/models/ver_model.backup.php",
+		"/C/xampp/htdocs/bbn/application/modules/__sampah/baru_verifikasi/views/baru_verifikasi_view_detail.php",
+		"/C/xampp/htdocs/bbn/application/modules/cari_data/controllers/cari_data.php",
+		"/C/xampp/htdocs/bbn/application/modules/cari_data/views/cari_data_view.php",
+		"/C/xampp/htdocs/bbn/application/modules/__sampah/baru_daftar/controllers/baru_daftar.php",
+		"/C/xampp/htdocs/bbn/application/modules/login/views/login_view_js.php",
+		"/C/xampp/htdocs/bbn/application/modules/login/views/login_view.php",
+		"/C/xampp/htdocs/bbn/application/modules/cari_data/views/cari_data_view_js.php",
+		"/C/xampp/htdocs/bbn/application/libraries/coba_controller.php",
+		"/C/xampp/htdocs/bbn/application/libraries/user_controller.php",
+		"/C/xampp/htdocs/bbn/application/modules/lupa_password/controllers/lupa_password.php",
+		"/C/Users/Arie/AppData/Local/Temp/[kat.cr]sqlyog.ultimate.v10.00.with.key.h33t.iahq76.torrent"
+>>>>>>> 61ac9dfd3ef8180b1a6f0df2e62a99e3d90918e9
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -729,6 +779,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+<<<<<<< HEAD
 			"cekbbn",
 			"this",
 			"$this",
@@ -823,6 +874,10 @@
 			"print_r",
 			"/>\"",
 			"Visual8"
+=======
+			"name",
+			"no_rangka"
+>>>>>>> 61ac9dfd3ef8180b1a6f0df2e62a99e3d90918e9
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -830,10 +885,6 @@
 		"regex": false,
 		"replace_history":
 		[
-			"polres_depan",
-			"admin_verifikasi",
-			"temp",
-			"=>"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -881,11 +932,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 25.0
+		"height": 22.0
 	},
 	"input":
 	{
-		"height": 31.0
+		"height": 30.0
 	},
 	"layout":
 	{
@@ -918,7 +969,7 @@
 	"project": "bbn.sublime-project",
 	"replace":
 	{
-		"height": 46.0
+		"height": 40.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -928,6 +979,7 @@
 		"selected_items":
 		[
 			[
+<<<<<<< HEAD
 				"baruver",
 				"application/modules/__sampah/baru_verifikasi/controllers/baru_verifikasi.php"
 			],
@@ -1014,12 +1066,21 @@
 			[
 				"stick",
 				"assets/css/sticky-footer.css"
+=======
+				"headerview",
+				"application\\views\\user\\header_view.php"
 			],
 			[
-				"database",
-				"application/config/database.php"
+				"loginviewjw",
+				"application\\modules\\login\\views\\login_view_js.php"
+>>>>>>> 61ac9dfd3ef8180b1a6f0df2e62a99e3d90918e9
 			],
 			[
+				"loginview",
+				"application\\modules\\login\\views\\login_view.php"
+			],
+			[
+<<<<<<< HEAD
 				"coremod",
 				"application/models/coremodel.php"
 			],
@@ -1338,26 +1399,26 @@
 			[
 				"tempalte",
 				"leasing/application/views/template.php"
+=======
+				"caridata.php",
+				"application\\modules\\cari_data\\controllers\\cari_data.php"
+			],
+			[
+				"lupaspass",
+				"application\\modules\\lupa_password\\controllers\\lupa_password.php"
+>>>>>>> 61ac9dfd3ef8180b1a6f0df2e62a99e3d90918e9
 			]
 		],
 		"width": 0.0
 	},
 	"select_project":
 	{
-		"height": 500.0,
+		"height": 0.0,
 		"last_filter": "",
 		"selected_items":
 		[
-			[
-				"",
-				"~/htdocs/cekfisik/eblokir.sublime-project"
-			],
-			[
-				"eb",
-				"~/htdocs/cekfisik/eblokir.sublime-project"
-			]
 		],
-		"width": 380.0
+		"width": 0.0
 	},
 	"select_symbol":
 	{
@@ -1376,7 +1437,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 267.0,
+	"side_bar_width": 256.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

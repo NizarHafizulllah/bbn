@@ -20,8 +20,8 @@
               </a>
             </li>
 		  <li class="treeview">
-              <a href="<?php echo site_url('cari_data'); ?>">
-                <i class="fa fa-search"></i> <span>Cek Data</span></i>
+              <a href="<?php echo site_url('daftar'); ?>">
+                <i class="fa fa-pencil-square-o"></i> <span>Daftar BBN</span></i>
               </a>
             </li>
             <li class="treeview">

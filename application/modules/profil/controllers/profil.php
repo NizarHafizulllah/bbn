@@ -1,5 +1,5 @@
 <?php
-class profil extends coba_controller{
+class profil extends user_controller{
 	var $controller;
 	function profil(){
 		$this->controller = get_class($this);
