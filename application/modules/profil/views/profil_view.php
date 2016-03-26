@@ -83,7 +83,7 @@ $userdata = $this->session->userdata('login');
         <section class="col-lg-7 connectedSortable ui-sortable">
       <!--form-->
 
-                 <form id="change_password" class="form-horizontal" method="post" action="<?php echo site_url('profil/simpan'); ?>" role="form">     
+                 <form id="change_password" class="form-horizontal" method="post" action="<?php echo site_url('profil/cek_password'); ?>" role="form">     
       <div class="box box-primary" id="bagian_form">
             <div class="box-header with-border">
               <h3 class="box-title">Keamanan</h3>
@@ -107,20 +107,20 @@ $userdata = $this->session->userdata('login');
     <div class="form-group">
       <label class="col-sm-3 control-label">Password Lama</label>
       <div class="col-sm-9">
-        <input type="password" name="pswd_lama" id="pswd_lama" class="form-control input-style">
+        <input type="password" name="pswd_lama" id="pswd_lama" class="form-control input-style" required="required">
       </div>
     </div>
     <div class="form-group">
       <label class="col-sm-3 control-label">Password Baru</label>
       <div class="col-sm-9">
       
-        <input type="password" id="pswd_baru" name="pswd_baru" class="form-control input-style" >
+        <input type="password" id="pswd_baru" name="pswd_baru" class="form-control input-style" required="required">
       </div>
     </div>
     <div class="form-group">
       <label class="col-sm-3 control-label">Ulang Password Baru</label>
       <div class="col-sm-9">
-        <input type="password" id="repswd_baru" name="repswd_baru" class="form-control input-style" >
+        <input type="password" id="repswd_baru" name="repswd_baru" class="form-control input-style" required="required">
       </div>
     </div>
     <div class="form-group pull-center">

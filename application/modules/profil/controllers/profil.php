@@ -17,11 +17,12 @@ class profil extends user_controller{
 		$this->cetak();
 	}
 
-	function cek_password($pswd_lama){
+	function cek_password($password){
 
 		$userdata = $this->session->userdata('login');
+
 		$post = $this->input->post();
-		$pswd = $post['pswd_lama'];
+		$password = $post['pswd_lama'];
 		$password = md5($pswd);
 		$id_user = $userdata['id_user'];
 		
@@ -32,15 +33,15 @@ class profil extends user_controller{
 		$member = $data->num_rows();
 
 
-		if ($member = 0)
+		if ($member = 1)
 		 {
 		 	
 			$this->form_validation->set_message('Password Yang Anda Masukkan Salah');
-		return false;		
+			return false;		
 		}
 	}
 
-	function cek_password_baru(){
+	function cek_password_baru($cek_password_baru){
 		$post = $this->input->post();
 		$pswd_baru = $post['pswd_baru'];
 		$repswd_baru = $post['repswd_baru'];
