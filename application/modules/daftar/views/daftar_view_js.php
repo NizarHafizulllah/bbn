@@ -1,66 +1,6 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 
-		$("#cekbbn").submit(function(){
-
-			$.ajax({
-				url : '<?php echo site_url("$this->controller/get_data_bbn") ?>',
-				data : $(this).serialize(),
-				type : 'post',
-				dataType : 'json',
-				success  : function(ret){
-					console.log(ret);
-				}
-			});
-			return false;
-
-		}); 
-
-
-
-
-
-$("#form_data").submit(function(){
-
-                $.ajax({
-                url : '<?php echo site_url("$this->controller/simpan") ?>',
-                data : $(this).serialize(),
-                type : 'post',
-                dataType : 'json',
-                success  : function(ret){
-                    console.log(ret);
-
-
-                if(ret.error == false) { 
-                    BootstrapDialog.alert({
-                            type: BootstrapDialog.TYPE_PRIMARY,
-                            title: 'Informasi',
-                            message: ret.message // ,
-
-                            // callback: function(result) {
-                            //         location.href='<?php echo site_url("user"); ?>';
-                            // }
-                             
-                             
-                            } 
-                        ); 
-                }
-                else {
-                    BootstrapDialog.alert({
-                                                type: BootstrapDialog.TYPE_DANGER,
-                                                title: 'Error',
-                                                message: ret.message
-                                                 
-                                            }); 
-                    }
-                }
-            });
-
-    return false;
-});
-
-
-
 
 $('#form_data').bootstrapValidator({
                 message: 'This value is not valid', 
@@ -198,25 +138,130 @@ $('#form_data').bootstrapValidator({
                     
                 }
                 
-            } );
+            });
+
+
+
+        $('#reset').click(function() {
+            $('#form_data').data('bootstrapValidator').resetForm(true);
+        });
+
+
+
+		$("#cekbbn").submit(function(){
+
+			$.ajax({
+				url : '<?php echo site_url("$this->controller/get_data_bbn") ?>',
+				data : $(this).serialize(),
+				type : 'post',
+				dataType : 'json',
+				success  : function(ret){
+					console.log(ret);
+				}
+			});
+			return false;
+
+		}); 
+
+
+
+
+
+
+
+
+/*
+$("#form_data").submit(function(){
+
+                $.ajax({
+                url : '<?php echo site_url("$this->controller/simpan") ?>',
+                data : $(this).serialize(),
+                type : 'post',
+                dataType : 'json',
+                success  : function(ret){
+                    console.log(ret);
+
+
+                if(ret.error == false) { 
+                    BootstrapDialog.alert({
+                            type: BootstrapDialog.TYPE_PRIMARY,
+                            title: 'Informasi',
+                            message: ret.message // ,
+
+                            // callback: function(result) {
+                            //         location.href='<?php echo site_url("user"); ?>';
+                            // }
+                             
+                             
+                            } 
+                        ); 
+                    // $('#form_data').data('bootstrapValidator').resetForm(true);
+                }
+                else {
+                    BootstrapDialog.alert({
+                                                type: BootstrapDialog.TYPE_DANGER,
+                                                title: 'Error',
+                                                message: ret.message
+                                                 
+                                            }); 
+                    }
+                }
+            });
+
+    return false;
+});
+*/
+
 
 
 }); 
 
-/*
 
-            
-        $('#reset').click(function() {
-        $('#form_data').data('bootstrapValidator').resetForm(true);
-        });
-*/
+$(document).on('click', '#tombolsubmit', function(){
+    // $('#form_data').submit();
+    // return false;
 
-/* $(.select2).select2();
-        $("#datemask").inputmask("dd/mm/yyyy", {"placeholde": "dd/mm/yyyy"}); 
+    $.ajax({
+                url : '<?php echo site_url("$this->controller/simpan") ?>',
+                data : $("#form_data").serialize(),
+                type : 'post',
+                dataType : 'json',
+                success  : function(ret){
+                    console.log(ret);
 
-	});
-    
-    */
+
+                if(ret.error == false) { 
+                    BootstrapDialog.alert({
+                            type: BootstrapDialog.TYPE_PRIMARY,
+                            title: 'Informasi',
+                            message: ret.message // ,
+
+                            // callback: function(result) {
+                            //         location.href='<?php echo site_url("user"); ?>';
+                            // }
+                             
+                             
+                            } 
+                        ); 
+                    $('#form_data').data('bootstrapValidator').resetForm(true);
+                }
+                else {
+                    BootstrapDialog.alert({
+                                                type: BootstrapDialog.TYPE_DANGER,
+                                                title: 'Error',
+                                                message: ret.message
+                                                 
+                                            }); 
+                    }
+                }
+            });
+
+    return false;
+
+
+
+});
+
 
        
 
