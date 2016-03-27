@@ -21,22 +21,21 @@ class profil extends user_controller{
 
 		$userdata = $this->session->userdata('login');
 
-		$post = $this->input->post();
-		$password = $post['pswd_lama'];
-		$password = md5($pswd);
+		
+		$pswd = md5($password);
 		$id_user = $userdata['id_user'];
 		
 		$this->db->where('id', $id_user);
-		$this->db->where('password', $password);	
+		$this->db->where('password', $pswd);	
 		$data = $this->db->get('members');
 
 		$member = $data->num_rows();
 
 
-		if ($member = 1)
+		if ($member < 1)
 		 {
 		 	
-			$this->form_validation->set_message('Password Yang Anda Masukkan Salah');
+			$this->form_validation->set_message('cek_password','Password Lama Yang Anda Masukkan Salah');
 			return false;		
 		}
 	}
@@ -47,7 +46,8 @@ class profil extends user_controller{
 		$repswd_baru = $post['repswd_baru'];
 
 		if ($pswd_baru != $repswd_baru) {
-			$this->form_validation->set_message('Pengulangan Password Tidak Sama');
+			$this->form_validation->set_message('cek_password_baru', 'Pengulangan Password Tidak Sama');
+
 			return false;
 		}
 
@@ -57,7 +57,7 @@ class profil extends user_controller{
 		$post = $this->input->post();
 
         $this->load->library('form_validation');
-         $this->form_validation->set_rules('$pswd_lama','Cek Password','callback_cek_pasword');
+         $this->form_validation->set_rules('pswd_lama','Cek Password','callback_cek_password');
 
   		$this->form_validation->set_rules('cek_password_baru','Password Baru','callback_cek_password_baru');
 		

@@ -7,9 +7,7 @@ class coba_controller extends CI_Controller {
 
 		$datalogin = $this->session->userdata("login");
 
-		if( $datalogin['login'] == false ) {
-			redirect('login/');
-		} 
+
 		
 	 
 		// sleep(1);
