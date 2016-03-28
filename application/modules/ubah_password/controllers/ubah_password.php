@@ -20,6 +20,7 @@ function index(){
 		$data['hash'] = $hash;
 		$this->db->where("id_user",$get['id_user']);
 		$this->db->where("hash",$get['hash']);
+		$this->db->where("valid", 0);
 		$rs = $this->db->get('lupa_password');
 		if($rs->num_rows() == 1){
 			$this->load->view('ubah_password', $data);
@@ -39,6 +40,10 @@ function update_password(){
 	
 	$this->db->where('id', $id);
 	$this->db->update('members', $data);
+
+	$valid = array('valid' => 1);
+	$this->db->where('hash', $hash);
+	$this->db->update('lupa_password', $valid);
 
 	$this->load->view('change_password_succes');
 }
