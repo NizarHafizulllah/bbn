@@ -47,7 +47,7 @@ class lupa_password extends coba_controller {
 			
 			$email_body = "<p>Kami Telah Menerima Permintaan <b>Recovery Password<b> anda <p>
 				        	<p>
-				        		silahkan klik link ". anchor("ubah_password?id_user=$user_id&hash=$hash")  ."
+				        		Silahkan klik link ". anchor("ubah_password?id_user=$user_id&hash=$hash")  ."
 				        	</p>";
 			
 			$res = $this->db->insert('lupa_password', $data);
@@ -62,7 +62,7 @@ class lupa_password extends coba_controller {
 			
 		}
 		else{
-			$ret = array("error"=>true,"message"=>$email." tidak pernah terdaftar sebelumnya");
+			$ret = array("error"=>true,"message"=>$email." Tidak pernah terdaftar sebelumnya");
 	}
 		
 	

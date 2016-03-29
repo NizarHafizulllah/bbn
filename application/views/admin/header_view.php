@@ -1,5 +1,5 @@
 <?php 
-$userdata = $this->session->userdata('login');
+$userdata = $this->session->userdata('admin_login');
 ?>
 
 <!DOCTYPE html>
@@ -94,15 +94,15 @@ folder instead of downloading all of them to reduce the load. -->
 							<p><?php echo $userdata['nama'] ?>
 						  	<small><?php echo $userdata['email'] ?></small>
 								</p>
-							<p><h2 style="color: white;">Users</h2></p>
+								<p><h2 style="color: white;">Admin</h2></p>
 						</li>	
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     <div class="pull-left">
-                      <a href="<?php echo site_url('profil'); ?>" class="btn btn-default btn-flat">Profile</a>
+                      <a href="<?php echo site_url('admin_profil'); ?>" class="btn btn-default btn-flat">Profile</a>
                     </div>
                     <div class="pull-right">
-                      <a href="<?php echo site_url('login/logout'); ?>" class="btn btn-default btn-flat">Sign out</a>
+                      <a href="<?php echo site_url('admin_login/logout'); ?>" class="btn btn-default btn-flat">Sign out</a>
                     </div>
                   </li>
 					  </ul>

@@ -1,7 +1,7 @@
 <?php
-class profil extends user_controller{
+class admin_profil extends admin_controller{
 	var $controller;
-	function profil(){
+	function admin_profil(){
 		$this->controller = get_class($this);
 		parent::__construct();
 	}
@@ -17,9 +17,9 @@ class profil extends user_controller{
 		$this->cetak();
 	}
 
-	function cek_password($password){
+	 function cek_password($password){
 
-		$userdata = $this->session->userdata('login');
+		$userdata = $this->session->userdata('admin_login');
 
 		
 		$pswd = md5($password);
@@ -27,7 +27,7 @@ class profil extends user_controller{
 		
 		$this->db->where('id', $id_user);
 		$this->db->where('password', $pswd);	
-		$data = $this->db->get('members');
+		$data = $this->db->get('admins');
 
 		$member = $data->num_rows();
 
@@ -68,11 +68,11 @@ class profil extends user_controller{
 
 			$data = array('password' => $password_baru);
 
-			$login = $this->session->userdata("login");
+			$login = $this->session->userdata("admin_login");
 			$user_id = $login['id_user'];
 
 			$this->db->where('id', $user_id);
-			$res = $this->db->update("members",$data);
+			$res = $this->db->update("admins",$data);
 			if(!$res){
 				$ret = array("error"=>true,"message"=>"gagal " . $this->db->last_query(). " " . mysql_error() );
 			}
