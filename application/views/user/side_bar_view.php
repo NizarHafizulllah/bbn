@@ -24,6 +24,12 @@
                 <i class="fa fa-pencil-square-o"></i> <span>Daftar BBN</span></i>
               </a>
             </li>
+        <li class="treeview">
+              <a href="<?php echo site_url('daftar/listdata'); ?>">
+                <i class="fa fa-list"></i> <span>Lihat Data BBN</span></i>
+              </a>
+            </li>     
+
             <li class="treeview">
 				<a href="#">
 					<i class="fa fa-user"></i>

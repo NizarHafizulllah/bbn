@@ -9,10 +9,7 @@ jQuery(document).ready(function() {
     /*
         Login form validation
     */
-	
-});
-   	$(document).ready(function(){
-			$('#form_lupa_password').bootstrapValidator({
+    $('#form_lupa_password').bootstrapValidator({
 				message: 'This value is not valid', 
 				feedbackIcons: { 
 					valid: 'glyphicon glyphicon-ok', 
@@ -26,7 +23,7 @@ jQuery(document).ready(function() {
 								message : 'Email tidak boleh kosong'	
 							},
 							emailAddress: {
-								message: 'email harus valid'
+								message : 'Email harus valid'
 							},
 							remote: {
 								type: 'POST',
@@ -44,9 +41,11 @@ jQuery(document).ready(function() {
 		$('#reset').click(function() {
         $('#form_reg').data('bootstrapValidator').resetForm(true);
     	});
-    
-    
+
+
+	
 });
+
 
 
 

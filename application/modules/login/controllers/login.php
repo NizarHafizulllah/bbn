@@ -215,7 +215,8 @@ function verifikasi(){
 					'login' => true,
 					'id_user' => $member->id,
 					'email' => $member->email,
-					'nama' => $member->nama
+					'nama' => $member->nama,
+					'alamat' => $member->alamat,
 					);
 
 		 		$this->session->set_userdata('login', $jj);

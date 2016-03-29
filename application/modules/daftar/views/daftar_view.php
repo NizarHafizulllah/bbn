@@ -1,8 +1,9 @@
+      <?php $userdata = $this->session->userdata('login'); ?>;
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Cari Data
+            PENDAFTARAN BBN
           </h1>
         </section>
 
@@ -12,7 +13,7 @@
           <!-- Default box -->
           <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Cari Data</h3>
+              <h3 class="box-title">Daftar</h3>
               <div class="box-tools pull-right">
                 <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
               </div>
@@ -202,7 +203,7 @@
 			</div>
 			<div class="form-group pull-center">
 				<div class="col-sm-offset-3 col-sm-9">
-					<button style="border-radius: 0;" type="submit" class="btn btn-lg btn-primary">Simpan</button>
+					<button id="tombolsubmit" style="border-radius: 0;" type="submit" class="btn btn-lg btn-primary"  >Simpan</button>
 					<button style="border-radius: 0;" id="reset" type="reset" class="btn btn-lg btn-danger">Cancel</button>
 				</div>
 			</div>

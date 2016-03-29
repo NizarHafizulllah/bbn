@@ -200,7 +200,7 @@ function cek_jenis_perubahan($jenis_perubahan) {
         $arr_data = array();
         foreach($result as $row) : 
 		// $daft_id = $row['daft_id'];
-        	 
+        	 $approved = ($row['approved']=='0')?"<span class='merah'>Pending</span>":"<span class='hijau'>Approved</span>";
 
         	 
         	$arr_data[] = array(
@@ -210,7 +210,7 @@ function cek_jenis_perubahan($jenis_perubahan) {
         		$row['nomor_mesin'],
         		$row['pemohon'],
         		$row['warna_tnkb'],
-        		$row['approved']
+        		$approved
          			 
         		  				);
         endforeach;
