@@ -7,7 +7,7 @@ class admin_data_list extends admin_controller{
 
 		$this->controller = get_class($this);
 		$this->load->helper("tanggal");
-		// $this->load->model("admin_data_list");
+		$this->load->model("admin_daftar_model","dm");
 		//$this->load->helper("serviceurl");
 		
 	}

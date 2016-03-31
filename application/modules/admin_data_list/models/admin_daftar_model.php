@@ -1,9 +1,9 @@
 <?php 
 
-class admin_data_list extends CI_Model {
+class admin_daftar_model extends CI_Model {
 
 
-	function admin_data_list(){
+	function admin_daftar_model(){
 		parent::__construct();
 	}
 
@@ -19,7 +19,6 @@ class admin_data_list extends CI_Model {
 		 extract($param);
 
 		 $kolom = array(0=>"jenis_perubahan",
-
 							"tanggal",
 							"nomor_rangka",
 							"nomor_mesin",
