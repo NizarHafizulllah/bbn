@@ -30,8 +30,35 @@
             </div>
             <div class="box-body">
 
+            <form role="form" action="" id="btn-cari" >
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="Tanggal">Tanggal</label>
+                <input name="tanggal" id="tanggal" type="text" class="form-control" placeholder="Tanggal"></input>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="nomor-rangka">No Rangka</label>
+                <input id="nomor_rangka" name="nomor_rangka" type="text" class="form-control" placeholder="No. Rangka"></input>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="nama">Nama</label>
+                <input id="nama" name="name" type="text" class="form-control" placeholder="Nama"></input>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="form-group">
+                <label></label>
+                <button type="submit" class="btn btn-primary form-control" id="btn_submit"><i class="fa fa-search">Cari</i></button>
+              </div>
+            </div>
+            </form>
 
-<table  width="100%" border="0" id="daftar_bbn" class="table table-striped 
+
+<table width="100%" border="0" id="daftar_bbn" class="table table-striped 
              table-bordered table-hover dataTable no-footer" role="grid">
 <thead>
   <tr  >

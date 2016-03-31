@@ -1,10 +1,9 @@
 <script src="<?php echo base_url("assets") ?>/js/jquery.dataTables.min.js"></script>
 
 <script type="text/javascript">
-	
 
-
- var dt = $("#daftar_bbn").DataTable(
+$(document).ready(function(){
+	 var dt = $("#daftar_bbn").DataTable(
 		 	{
 		 		// "order": [[ 0, "desc" ]],
 		 		// "iDisplayLength": 50,
@@ -16,6 +15,14 @@
 
 		 
 		 $("#daftar_bbn_filter").css("display","none");  
+	
+	$('#btn_submit').submit(function(){
+		return false;
+	});	
+});
+	
+
+
 
 
 </script>
