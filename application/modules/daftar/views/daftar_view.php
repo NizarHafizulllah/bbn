@@ -1,5 +1,7 @@
-      <?php $userdata = $this->session->userdata('login'); ?>;
-      <div class="content-wrapper">
+<link href="<?php echo base_url("assets") ?>/css/datepicker.css" rel="stylesheet">
+<script src="<?php echo base_url("assets") ?>/js/bootstrap-datepicker.js"></script>
+<!--       <?php $userdata = $this->session->userdata('login'); ?>;
+ -->      <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
@@ -95,7 +97,7 @@
 			<label class="col-sm-3 control-label">Tanggal BBN2</label>
 			<div class="col-sm-9">
 			
-				<input type="text" id="tanggal" name="tanggal" class="form-control input-style"   placeholder="Tanggal BBN2"  data-inputmask= "'alias' : 'dd/mm/yy'" data-mask>
+				<input type="text" id="tanggal" class="tanggal" name="tanggal" class="form-control input-style"   placeholder="Tanggal BBN2"  data-date-format="dd-mm-yyyy">
 			</div>
 		</div>
 		<div class="form-group">
