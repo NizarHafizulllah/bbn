@@ -27,7 +27,24 @@ class admin_daftar_model extends CI_Model {
 							"approved"
 		 	);
 
+
+		$tanggal_awal = flipdate($tanggal_awal);
+		$tanggal_akhir = flipdate($tanggal_akhir);
+
 		 $this->db->select('*')->from("daftar_bbn");
+
+
+		 if(!empty($tanggal_awal) and !empty($tanggal_akhir) ) {
+		 	$this->db->where("tanggal between '$tanggal_awal' and '$tanggal_akhir'",null,false);	 	
+		 }
+
+		 if(!empty($no_rangka)) {
+		 	$this->db->where("nomor_rangka",$no_rangka);
+		 }
+
+		 if(!empty($nama)) {
+		 	$this->db->like("pemohon",$nama);
+		 }
 
 		($param['limit'] != null ? $this->db->limit($param['limit']['end'], $param['limit']['start']) : '');
 		//$this->db->limit($param['limit']['end'], $param['limit']['start']) ;
