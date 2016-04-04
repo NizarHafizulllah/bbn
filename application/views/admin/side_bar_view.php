@@ -26,7 +26,7 @@
             </li>
             <li class="treeview">
               <a href="<?php echo site_url('admin_profil'); ?>">
-                <i class="fa fa-user"></i> <span>Data</span></i>
+                <i class="fa fa-user"></i> <span>Profil</span></i>
               </a>
             </li>
           </ul>

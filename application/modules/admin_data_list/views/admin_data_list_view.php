@@ -60,13 +60,13 @@
             <div class="col-md-1">
               <div class="form-group">
                 <label></label>
-                <button type="submit" class="btn btn-primary form-control" id="btn_submit"><i class="fa fa-search">Cari</i></button>
+                <button type="submit" class="btn btn-primary form-control" id="btn_submit">Cari</i></button>
               </div>
             </div>
             <div class="col-md-1">
               <div class="form-group">
                 <label></label>
-                <button type="reset" class="btn btn-primary form-control" id="btn_reset"><i class="fa fa-search">Reset</i></button>
+                <button type="reset" class="btn btn-danger form-control" id="btn_reset">Reset</i></button>
               </div>
             </div>
             </form>

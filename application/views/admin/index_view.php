@@ -26,13 +26,13 @@
               <!-- small box -->
               <div class="small-box bg-aqua">
                 <div class="inner">
-                  <h3>150</h3>
-                  <p>New Orders</p>
+                  <h3>Data</h3>
+                  <p>Pendaftaran</p>
                 </div>
                 <div class="icon">
-                  <i class="ion ion-stat-bar"></i>
+                  <i class="ion ion-stats-bars"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                <a href="admin_data_list" class="small-box-footer">Lihat <i class="fa fa-arrow-circle-right"></i></a>
               </div>
             </div><!-- ./col -->
             <div class="col-lg-3 col-xs-6">
@@ -45,7 +45,7 @@
                 <div class="icon">
                   <i class="ion ion-person"></i>
                 </div>
-                <a href="admin_profil" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                <a href="admin_profil" class="small-box-footer">Lihat <i class="fa fa-arrow-circle-right"></i></a>
               </div>
             </div><!-- ./col -->
           
