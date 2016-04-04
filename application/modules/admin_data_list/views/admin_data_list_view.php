@@ -1,3 +1,5 @@
+ <link href="<?php echo base_url("assets") ?>/css/datepicker.css" rel="stylesheet">
+<script src="<?php echo base_url("assets") ?>/js/bootstrap-datepicker.js"></script>
  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/jquery.dataTables.min.css">
 <style type="text/css">
   .merah{
@@ -34,7 +36,7 @@
             <div class="col-md-3">
               <div class="form-group">
                 <label for="Tanggal">Tanggal</label>
-                <input name="tanggal" id="tanggal" type="text" class="form-control" placeholder="Tanggal"></input>
+                <input name="tanggal" id="tanggal" type="text" class="form-control tanggal" placeholder="Tanggal" data-date-format="dd-mm-yyyy"></input>
               </div>
             </div>
             <div class="col-md-3">

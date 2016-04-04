@@ -3,6 +3,10 @@
 <script type="text/javascript">
 
 $(document).ready(function(){
+	$(".tanggal").datepicker().on('changeDate', function(ev){                 
+   			 $('.tanggal').datepicker('hide');
+		});
+
 	 var dt = $("#daftar_bbn").DataTable(
 		 	{
 		 		// "order": [[ 0, "desc" ]],
