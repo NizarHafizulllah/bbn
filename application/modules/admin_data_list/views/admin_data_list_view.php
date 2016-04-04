@@ -1,4 +1,4 @@
- <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/jquery.dataTables.min.css">
 <style type="text/css">
   .merah{
     color : red;
