@@ -33,10 +33,16 @@
             <div class="box-body">
 
             <form role="form" action="" id="btn-cari" >
-            <div class="col-md-3">
+            <div class="col-md-2">
               <div class="form-group">
-                <label for="Tanggal">Tanggal</label>
-                <input name="tanggal" id="tanggal" type="text" class="form-control tanggal" placeholder="Tanggal" data-date-format="dd-mm-yyyy"></input>
+                <label for="Tanggal">Tanggal Awal</label>
+                <input name="tanggal_awal" id="tanggal_awal" type="text" class="form-control tanggal_awal" placeholder="Tanggal Awal" data-date-format="dd-mm-yyyy"></input>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="form-group">
+                <label for="Tanggal">Tanggal Akhir</label>
+                <input name="tanggal_akhir" id="tanggal_akhir" type="text" class="form-control tanggal_akhir" placeholder="Tanggal Akhir" data-date-format="dd-mm-yyyy"></input>
               </div>
             </div>
             <div class="col-md-3">

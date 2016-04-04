@@ -59,7 +59,7 @@ class admin_daftar_model extends CI_Model {
 		 	);
 
 		 $this->db->select('*')->from("daftar_bbn");
-		 $this->db->where("tanggal",$tanggal);
+		 $this->db->where("nama",$nama);
 
 		($param['limit'] != null ? $this->db->limit($param['limit']['end'], $param['limit']['start']) : '');
 		//$this->db->limit($param['limit']['end'], $param['limit']['start']) ;

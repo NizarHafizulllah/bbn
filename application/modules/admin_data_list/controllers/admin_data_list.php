@@ -70,7 +70,7 @@ function index(){
         $arr_data = array();
         foreach($result as $row) : 
 		// $daft_id = $row['daft_id'];
-        	 $approved = ($row['approved']=='0')?"<span class='merah'>Pending</span>":"<span class='hijau'>Approved</span>";
+        	 $approved = ($row['approved']=='0')?"<span class='pull-right badge bg-red'>Pending</span>":"<span class='pull-right badge bg-green'>Approved</span>";
 
         	 
         	$arr_data[] = array(
@@ -99,7 +99,7 @@ function index(){
     function cari_data(){
 
     	$post = $this->input->post();
-    	$tanggal = $post['tanggal'];
+    	$nama = $post['nama'];
 
     	$draw = $_REQUEST['draw']; // get the requested page 
     	$start = $_REQUEST['start'];
@@ -118,7 +118,7 @@ function index(){
 				"sort_by" => $sidx,
 				"sort_direction" => $sord,
 				"limit" => null,
-				"tanggal" => $tanggal,
+				"nama" => $nama,
 				
 				 
 		);     
