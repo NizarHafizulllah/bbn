@@ -60,3 +60,7 @@
             </div>
         </section>
 </div>
+
+<?php 
+$this->load->view("admin_data_list_view_js");
+?>
