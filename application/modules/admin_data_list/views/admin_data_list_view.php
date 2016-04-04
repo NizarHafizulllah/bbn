@@ -54,13 +54,19 @@
             <div class="col-md-3">
               <div class="form-group">
                 <label for="nama">Nama</label>
-                <input id="nama" name="name" type="text" class="form-control" placeholder="Nama"></input>
+                <input id="nama" name="nama" type="text" class="form-control" placeholder="Nama"></input>
               </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-1">
               <div class="form-group">
                 <label></label>
                 <button type="submit" class="btn btn-primary form-control" id="btn_submit"><i class="fa fa-search">Cari</i></button>
+              </div>
+            </div>
+            <div class="col-md-1">
+              <div class="form-group">
+                <label></label>
+                <button type="reset" class="btn btn-primary form-control" id="btn_reset"><i class="fa fa-search">Reset</i></button>
               </div>
             </div>
             </form>

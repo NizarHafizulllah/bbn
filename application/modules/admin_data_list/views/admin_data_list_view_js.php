@@ -23,21 +23,31 @@ $(document).ready(function(){
 		 
 		 $("#daftar_bbn_filter").css("display","none");  
 	
-	$('#btn_submit').submit(function(){
-			 var dt = $("#daftar_bbn").DataTable(
-		 	{
-		 		// "order": [[ 0, "desc" ]],
-		 		// "iDisplayLength": 50,
-				"columnDefs": [ { "targets": 0, "orderable": false } ],
-				"processing": true,
-		        "serverSide": true,
-		        "ajax": '<?php echo site_url("admin_data_list/cari_data") ?>'
-		 	});
+	 
+		 $("#btn_submit").click(function(){
+		 	  // alert('hello');
+		 	  
 
-		 
-		 $("#daftar_bbn_filter").css("display","none");  
-		 
-	});	
+		 	  dt.columns(1).search($("#tanggal_awal").val())
+				 .column(2).search($("#tanggal_akhir").val())
+				 .column(3).search($("#nomor_rangka").val())
+				 .column(4).search($("#nama").val())
+				 .draw();
+
+				 return false;
+		 });
+
+
+		 $("#btn_reset").click(function(){
+		 	$("#tanggal_awal").val('');
+			$("#tanggal_akhir").val('');
+			$("#nomor_rangka").val('');
+			$("#nama").val('');
+
+			$("#btn_submit").click();
+		 });
+
+
 });
 	
 
