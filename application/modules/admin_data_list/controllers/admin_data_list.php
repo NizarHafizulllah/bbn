@@ -37,10 +37,11 @@ function index(){
         $sidx = isset($_REQUEST['order'][0]['column'])?$_REQUEST['order'][0]['column']:0; // get index row - i.e. user click to sort 
         $sord = isset($_REQUEST['order'][0]['dir'])?$_REQUEST['order'][0]['dir']:"asc"; // get the direction if(!$sidx) $sidx =1;  
         
-        // $no_rangka = $_REQUEST['columns'][5]['search']['value'];
-        // $tanggal_awal = $_REQUEST['columns'][4]['search']['value'];
-        // $tanggal_akhir = $_REQUEST['columns'][6]['search']['value'];
-        // $status = $_REQUEST['columns'][7]['search']['value'];
+       
+        $tanggal_awal = $_REQUEST['columns'][1]['search']['value'];
+        $tanggal_akhir = $_REQUEST['columns'][2]['search']['value'];
+        $no_rangka = $_REQUEST['columns'][3]['search']['value'];
+        $nama = $_REQUEST['columns'][4]['search']['value'];
 
 
       //  order[0][column]
@@ -48,6 +49,10 @@ function index(){
 				"sort_by" => $sidx,
 				"sort_direction" => $sord,
 				"limit" => null,
+                "tanggal_awal" => $tanggal_awal,
+                "tanggal_akhir" => $tanggal_akhir,
+                "no_rangka" => $no_rangka, 
+                "nama" => $nama
 				
 				 
 		);     
@@ -70,7 +75,7 @@ function index(){
         $arr_data = array();
         foreach($result as $row) : 
 		// $daft_id = $row['daft_id'];
-        	 $approved = ($row['approved']=='0')?"<span class='merah'>Pending</span>":"<span class='hijau'>Approved</span>";
+        	 $approved = ($row['approved']=='0')?"<span class='pull-right badge bg-red'>Pending</span>":"<span class='pull-right badge bg-green'>Approved</span>";
 
         	 
         	$arr_data[] = array(
@@ -93,8 +98,6 @@ function index(){
          
         echo json_encode($responce); 
     }
-
-	
 
 }
 

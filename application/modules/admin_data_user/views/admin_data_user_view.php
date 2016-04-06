@@ -1,20 +1,12 @@
-<<<<<<< HEAD
+
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/jquery.dataTables.min.css">
-=======
- <link href="<?php echo base_url("assets") ?>/css/datepicker.css" rel="stylesheet">
-<script src="<?php echo base_url("assets") ?>/js/bootstrap-datepicker.js"></script>
+
+ <link href="<?php echo base_url(); ?>assets/css/datepicker.css" rel="stylesheet">
  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/jquery.dataTables.min.css">
->>>>>>> 359e42cf52702717e17f3da94508e25a83465a11
-<style type="text/css">
-  .merah{
-    color : red;
-  }
 
-  .hijau {
-    color: green;
-  }
+ <script src="<?php echo base_url(); ?>assets/js/bootstrap-datepicker.js"></script>
 
-</style>
+
 <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
@@ -37,60 +29,47 @@
             <div class="box-body">
 
             <form role="form" action="" id="btn-cari" >
-            <div class="col-md-2">
-              <div class="form-group">
-                <label for="Tanggal">Tanggal Awal</label>
-                <input name="tanggal_awal" id="tanggal_awal" type="text" class="form-control tanggal_awal" placeholder="Tanggal Awal" data-date-format="dd-mm-yyyy"></input>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="form-group">
-                <label for="Tanggal">Tanggal Akhir</label>
-                <input name="tanggal_akhir" id="tanggal_akhir" type="text" class="form-control tanggal_akhir" placeholder="Tanggal Akhir" data-date-format="dd-mm-yyyy"></input>
-              </div>
-            </div>
             <div class="col-md-3">
               <div class="form-group">
-                <label for="nomor-rangka">No Rangka</label>
-                <input id="nomor_rangka" name="nomor_rangka" type="text" class="form-control" placeholder="No. Rangka"></input>
+                <label for="Nama">Nama</label>
+                <input name="nama" id="nama" type="text" class="form-control" placeholder="Nama"> </input>
               </div>
+
             </div>
-            <div class="col-md-3">
+             <div class="col-md-2">
               <div class="form-group">
-                <label for="nama">Nama</label>
-                <input id="nama" name="nama" type="text" class="form-control" placeholder="Nama"></input>
+                <label for="Nama">Status</label>
+                <input name="status" id="status" type="text" class="form-control" placeholder="Satus"> </input>
+              </div>
+          
+            </div>
+            <div class="col-md-1">
+              <div class="form-group">
+                <label> </label>
+                <button type="submit" class="btn btn-primary form-control" id="btn_submit">Cari</button>
               </div>
             </div>
             <div class="col-md-1">
               <div class="form-group">
                 <label></label>
-                <button type="submit" class="btn btn-primary form-control" id="btn_submit"><i class="fa fa-search">Cari</i></button>
-              </div>
-            </div>
-            <div class="col-md-1">
-              <div class="form-group">
-                <label></label>
-                <button type="reset" class="btn btn-primary form-control" id="btn_reset"><i class="fa fa-search">Reset</i></button>
+                <button type="reset" class="btn btn-danger form-control" id="btn_reset">Reset</i></button>
               </div>
             </div>
             </form>
 
 
-<table width="100%" border="0" id="daftar_bbn" class="table table-striped 
+<table width="100%" border="0" id="members" class="table table-striped 
              table-bordered table-hover dataTable no-footer" role="grid">
 <thead>
   <tr  >
 
         
-        <th width="5%">JENIS BBN</th>
-        <th width="7%">TANGGAL</th>
-        <th width="16%">NO RANGKA </th>
-<!--         <th width="15%">NO BPKB</th>  
- -->      <th width="15%">NO. MESIN </th>    
-        
-      <th width="19%">NAMA PEMOHON </th>
-        <th width="14%">WARNA </th>
-      <th width="10%">APPROVED</th>
+        <th width="10%">NAMA</th>
+        <th width="15%">EMAIL</th>
+        <th width="5%">NO_HP</th>  
+       <th width="20%">ALAMAT</th>    
+        <th width="5%">STATUS</th>
+       
     </tr>
   
 </thead>
@@ -107,5 +86,5 @@
 </div>
 
 <?php 
-$this->load->view("admin_data_list_view_js");
+$this->load->view("admin_data_user_view_js");
 ?>

@@ -14,7 +14,7 @@ class daftar extends user_controller{
 		
 //		$cek_session = $this->session->userdata('session');
 //			if(!empty($cek)){
-				$data_array=array();
+		$data_array=array();
 		$content = $this->load->view($this->controller."_view",$data_array,true);
 
 		$this->set_subtitle("Daftar BBN");
@@ -54,11 +54,29 @@ class daftar extends user_controller{
 
 			$json_data = json_encode($data_service);	
 
-			echo $json_data; 
+			// echo $json_data; 
 
 			$ret_service = $this->execute_service($url,"ComplGetBerkasCheckPoint",$json_data);
-			//show_array($ret_service);
-			echo $ret_service;
+			// show_array($ret_service);
+			// echo $ret_service;
+			if($ret_service['error'] == true){
+				$ret = array("error"=>true,'pesan'=>"Gagal menghubungi server ");
+			}
+			else if($ret_service['data']['Result'] == true ) {
+			    $ret = array("error"=>false, 
+			    	'pesan'=>'Data ditemukan', 
+			    	'data'=>$ret_service['data']['Data']);
+			}
+			else if($ret_service['data']['Result'] == false ) {
+			    $ret = array("error"=>true, 
+			    	'pesan'=>'Data tidak ditemukan. Silahkan ke loket');
+			}
+			else {
+				$ret = array("error"=>true,'pesan'=>"Error not defined");
+			}
+
+			echo json_encode($ret);
+
 	}
     
     

@@ -1,13 +1,12 @@
 <?php 
 
-class admin_data_list extends admin_controller{
+class admin_data_user extends admin_controller{
   var $controller;
-  function admin_data_list(){
+  function admin_data_user(){
     parent::__construct();
 
     $this->controller = get_class($this);
-    $this->load->helper("tanggal");
-    $this->load->model("admin_daftar_model","dm");
+    $this->load->model("admin_user_model","dm");
     //$this->load->helper("serviceurl");
     
   }
@@ -19,8 +18,8 @@ function index(){
     $data_array=array();
     $content = $this->load->view($this->controller."_view",$data_array,true);
 
-    $this->set_subtitle("Data List");
-    $this->set_title("Data List");
+    $this->set_subtitle("Data User");
+    $this->set_title("Data User");
     $this->set_content($content);
     $this->cetak();
 }
@@ -70,17 +69,15 @@ function index(){
         $arr_data = array();
         foreach($result as $row) : 
     // $daft_id = $row['daft_id'];
-           $approved = ($row['approved']=='0')?"<span class='merah'>Pending</span>":"<span class='hijau'>Approved</span>";
+           $aktif = ($row['aktif']=='0')?"<span class='pull-right badge bg-red'>Tidak Aktif</span>":"<span class='pull-right badge bg-green'>Aktif</span>";
 
            
           $arr_data[] = array(
-            $row['jenis_perubahan'],
-            flipdate($row['tanggal']), 
-            $row['nomor_rangka'],
-            $row['nomor_mesin'],
-            $row['pemohon'],
-            $row['warna_tnkb'],
-            $approved
+            $row['nama'],
+            $row['email'],
+            $row['nomor_hp'],
+            $row['alamat'],
+            $aktif
                
                       );
         endforeach;
