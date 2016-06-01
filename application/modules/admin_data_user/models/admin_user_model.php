@@ -10,7 +10,7 @@ class admin_user_model extends CI_Model {
 
 
 
- function data($param)
+  function data($param)
 	{		
 
 		// show_array($param);
@@ -18,12 +18,12 @@ class admin_user_model extends CI_Model {
 
 		 extract($param);
 
-		 $kolom = array(0=>"nama",
-							"email",
-							"nomor_hp",
+		 $kolom = array(0=>"email",
+							"nama",
 							"alamat",
-							"aktif"				
-		 	);
+							"nomor_hp"
+							
+							);
 
 
 		
@@ -31,30 +31,21 @@ class admin_user_model extends CI_Model {
 		 $this->db->select('*')->from("members");
 
 
-		  if(!empty($nama)) {
+		 
+
+		 if(!empty($nama)) {
 		 	$this->db->like("nama",$nama);
 		 }
-		 if(!empty($aktif) and !empty($tidak_aktf) ) {
-		 	$this->db->where("status between '$aktif' and '$tidak_aktf'",null,false);	 	
-		 }
-
 
 		($param['limit'] != null ? $this->db->limit($param['limit']['end'], $param['limit']['start']) : '');
-		// $this->db->limit($param['limit']['end'], $param['limit']['start']) ;
+		//$this->db->limit($param['limit']['end'], $param['limit']['start']) ;
        
        ($param['sort_by'] != null) ? $this->db->order_by($kolom[$param['sort_by']], $param['sort_direction']) :'';
         
 		$res = $this->db->get();
-		  // echo $this->db->last_query(); exit;
+		// echo $this->db->last_query(); exit;
  		return $res;
 	}
-
-
-	
-
-	
-
-
 }
 
 ?>
